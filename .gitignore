@@ -7,4 +7,11 @@ CRM.BLL/bin/
 CRM.BLL/obj/
 CRM.BLL/bin/*
 CRM.BLL/obj/*
-
+CRM.Common/bin/
+CRM.Common/obj/
+CRM.Common/bin/*
+CRM.Common/obj/*
+CRM.Common/bin/
+CRM.Model/bin/
+CRM.Model/bin/*
+CRM.Model/Dal/
