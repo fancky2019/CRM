@@ -4,3 +4,5 @@ CRM/bin/Debug/
 CRM/obj/Debug/
 
 *.cache
+
+\.vs/CRM/v16/
