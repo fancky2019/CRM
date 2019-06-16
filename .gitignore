@@ -1,18 +1,20 @@
 
-CRM/bin/Debug/
+CRM/bin/
 
-CRM/obj/Debug/
+CRM/obj/
 
 *.cache
 
 \.vs/CRM/v16/
 
-CRM\.Dal/bin/Debug/
+CRM\.Dal/bin/
 
-CRM\.Common/bin/Debug/
+CRM\.Dal/obj/
 
-CRM\.BLL/bin/Debug/
+CRM\.Common/bin/
 
-CRM\.BLL/obj/Debug/
+CRM\.Common/obj/
 
-CRM\.Common/obj/Debug/
+CRM\.BLL/bin/
+
+CRM\.BLL/obj/
