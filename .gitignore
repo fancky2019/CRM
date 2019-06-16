@@ -2,3 +2,7 @@
 obj/
 bin/
 .vs/Demos/v16/.suo
+CRM/bin/
+CRM.BLL/bin/
+CRM.BLL/obj/
+
