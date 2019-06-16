@@ -1,0 +1,6 @@
+
+CRM/bin/Debug/
+
+CRM/obj/Debug/
+
+*.cache
