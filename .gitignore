@@ -6,3 +6,9 @@ CRM/obj/Debug/
 *.cache
 
 \.vs/CRM/v16/
+
+CRM\.Dal/bin/Debug/
+
+CRM\.Common/bin/Debug/
+
+CRM\.BLL/bin/Debug/
