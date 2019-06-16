@@ -6,7 +6,6 @@ D:\Work\Project\Git\C# - 副本\CRM\CRM.Model\obj\Debug\CRM.Model.dll
 D:\Work\Project\Git\C# - 副本\CRM\CRM.Model\obj\Debug\CRM.Model.pdb
 D:\Work\Project\Git\C#\CRM\CRM.Model\bin\Debug\CRM.Model.dll
 D:\Work\Project\Git\C#\CRM\CRM.Model\bin\Debug\CRM.Model.pdb
-D:\Work\Project\Git\C#\CRM\CRM.Model\obj\Debug\CRM.Model.csprojAssemblyReference.cache
 D:\Work\Project\Git\C#\CRM\CRM.Model\obj\Debug\CRM.Model.csproj.CoreCompileInputs.cache
 D:\Work\Project\Git\C#\CRM\CRM.Model\obj\Debug\CRM.Model.dll
 D:\Work\Project\Git\C#\CRM\CRM.Model\obj\Debug\CRM.Model.pdb

@@ -12,3 +12,7 @@ CRM\.Dal/bin/Debug/
 CRM\.Common/bin/Debug/
 
 CRM\.BLL/bin/Debug/
+
+CRM\.BLL/obj/Debug/
+
+CRM\.Common/obj/Debug/
