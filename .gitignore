@@ -7,14 +7,14 @@ CRM/obj/
 
 \.vs/CRM/v16/
 
-CRM\.Dal/bin/
+CRM.Dal/bin/
 
-CRM\.Dal/obj/
+CRM.Dal/obj/
 
-CRM\.Common/bin/
+CRM.Common/bin/
 
-CRM\.Common/obj/
+CRM.Common/obj/
 
-CRM\.BLL/bin/
+CRM.BLL/bin/
 
-CRM\.BLL/obj/
+CRM.BLL/obj/
