@@ -1,0 +1,11 @@
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\CRM.Common.dll
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\CRM.Common.pdb
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\AutoMapper.dll
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\log4net.dll
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\AutoMapper.xml
+D:\Work\Project\Git\C#\CRM\CRM.Common\bin\Release\log4net.xml
+D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Release\CRM.Common.csprojAssemblyReference.cache
+D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Release\CRM.Common.csproj.CoreCompileInputs.cache
+D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Release\CRM.Common.csproj.CopyComplete
+D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Release\CRM.Common.dll
+D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Release\CRM.Common.pdb

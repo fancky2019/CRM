@@ -1,0 +1,63 @@
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.BLL.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.BLL.pdb
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Common.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Dal.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Model.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\AutoMapper.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\log4net.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\EntityFramework.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\Dapper.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Common.pdb
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Dal.pdb
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\WMS.Model.pdb
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\AutoMapper.xml
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\log4net.xml
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\EntityFramework.xml
+D:\Work\Project\Git\C#\WMS\WMS.BLL\bin\Debug\Dapper.xml
+D:\Work\Project\Git\C#\WMS\WMS.BLL\obj\Debug\CRM.BLL.csprojAssemblyReference.cache
+D:\Work\Project\Git\C#\WMS\WMS.BLL\obj\Debug\CRM.BLL.csproj.CoreCompileInputs.cache
+D:\Work\Project\Git\C#\WMS\WMS.BLL\obj\Debug\CRM.BLL.csproj.CopyComplete
+D:\Work\Project\Git\C#\WMS\WMS.BLL\obj\Debug\WMS.BLL.dll
+D:\Work\Project\Git\C#\WMS\WMS.BLL\obj\Debug\WMS.BLL.pdb
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.BLL.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.BLL.pdb
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Common.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Dal.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Model.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\AutoMapper.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\log4net.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\EntityFramework.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\Dapper.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Common.pdb
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Dal.pdb
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\CRM.Model.pdb
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\AutoMapper.xml
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\log4net.xml
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\EntityFramework.xml
+D:\Work\Project\Git\C#\CRM\CRM.BLL\bin\Debug\Dapper.xml
+D:\Work\Project\Git\C#\CRM\CRM.BLL\obj\Debug\CRM.BLL.csprojAssemblyReference.cache
+D:\Work\Project\Git\C#\CRM\CRM.BLL\obj\Debug\CRM.BLL.csproj.CoreCompileInputs.cache
+D:\Work\Project\Git\C#\CRM\CRM.BLL\obj\Debug\CRM.BLL.csproj.CopyComplete
+D:\Work\Project\Git\C#\CRM\CRM.BLL\obj\Debug\CRM.BLL.dll
+D:\Work\Project\Git\C#\CRM\CRM.BLL\obj\Debug\CRM.BLL.pdb
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.BLL.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.BLL.pdb
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Common.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Dal.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Model.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\AutoMapper.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\log4net.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\EntityFramework.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\Dapper.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Common.pdb
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Dal.pdb
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\CRM.Model.pdb
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\AutoMapper.xml
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\log4net.xml
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\EntityFramework.xml
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\bin\Debug\Dapper.xml
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\obj\Debug\CRM.BLL.csprojAssemblyReference.cache
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\obj\Debug\CRM.BLL.csproj.CoreCompileInputs.cache
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\obj\Debug\CRM.BLL.csproj.CopyComplete
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\obj\Debug\CRM.BLL.dll
+D:\Work\Project\Git\C# - 副本\CRM\CRM.BLL\obj\Debug\CRM.BLL.pdb
