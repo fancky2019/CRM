@@ -20,6 +20,10 @@ namespace CRM
 
         private void SbtnLogin_Click(object sender, EventArgs e)
         {
+            if(this.ceRememberPassword.Checked)
+            {
+
+            }
             this.Hide();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
