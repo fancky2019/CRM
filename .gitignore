@@ -5,4 +5,6 @@ bin/
 CRM/bin/
 CRM.BLL/bin/
 CRM.BLL/obj/
+CRM.BLL/bin/*
+CRM.BLL/obj/*
 
