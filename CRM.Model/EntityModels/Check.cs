@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class BonusPoints
+    public class Check
     {
         /// <summary>
         /// 
@@ -13,22 +13,22 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public int MemberID { get; set; }
+        public Guid GUID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal Amount { get; set; }
+        public int ProductID { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Count { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public DateTime CreateTime { get; set; }
         /// <summary>
-        /// 
+        /// 0、删除 1、正常
         /// </summary>
-        public DateTime ModifyTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string TimeStamp { get; set; }
+        public short Status { get; set; }
     }
 }

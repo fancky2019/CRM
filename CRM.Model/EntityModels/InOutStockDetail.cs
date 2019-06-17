@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class Member
+    public class InOutStockDetail
     {
         /// <summary>
         /// 
@@ -13,23 +13,23 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public string UserName { get; set; }
+        public Guid GUID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string Password { get; set; }
+        public int InOutStockID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string PhoneNumber { get; set; }
+        public int ProductID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string IDCard { get; set; }
+        public int Count { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string Address { get; set; }
+        public DateTime CrateTime { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -37,18 +37,6 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public DateTime CreateTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
         public DateTime ModifyTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Remark { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string TimeStamp { get; set; }
     }
 }

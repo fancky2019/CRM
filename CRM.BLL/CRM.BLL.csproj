@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="InOutStockManager\InOutStockManagerBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductManager\ProductManagerBll.cs" />
+    <Compile Include="SystemManager\SkuManagerBll.cs" />
+    <Compile Include="StockManager\StockManagerBll.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CRM.Common\CRM.Common.csproj">

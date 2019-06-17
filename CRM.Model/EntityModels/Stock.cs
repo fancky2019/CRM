@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class User
+    public class Stock
     {
         /// <summary>
         /// 
@@ -13,22 +13,18 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public string UserName { get; set; }
+        public Guid GUID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string Password { get; set; }
+        public string StockName { get; set; }
         /// <summary>
         /// 
+        /// </summary>
+        public string Location { get; set; }
+        /// <summary>
+        /// 0、删除 1、正常
         /// </summary>
         public short Status { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime CreateTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string TimeStamp { get; set; }
     }
 }
