@@ -107,18 +107,6 @@
     <Compile Include="UserControls\GridControlUserControl.Designer.cs">
       <DependentUpon>GridControlUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\InOutStockManager\InOutStockEdit.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\InOutStockManager\InOutStockEdit.Designer.cs">
-      <DependentUpon>InOutStockEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\InOutStockManager\InOutStockManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\InOutStockManager\InOutStockManager.Designer.cs">
-      <DependentUpon>InOutStockManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\PageNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,24 +124,6 @@
     </Compile>
     <Compile Include="UserControls\ProcuctManager\ProductManager.Designer.cs">
       <DependentUpon>ProductManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\QureyManager\SkuQuery.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\QureyManager\SkuQuery.Designer.cs">
-      <DependentUpon>SkuQuery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\StockManager\StockManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\StockManager\StockManager.Designer.cs">
-      <DependentUpon>StockManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\SystemManager\SkuManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\SystemManager\SkuManager.Designer.cs">
-      <DependentUpon>SkuManager.cs</DependentUpon>
     </Compile>
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
@@ -187,12 +157,6 @@
     <EmbeddedResource Include="UserControls\GridControlUserControl.resx">
       <DependentUpon>GridControlUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\InOutStockManager\InOutStockEdit.resx">
-      <DependentUpon>InOutStockEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\InOutStockManager\InOutStockManager.resx">
-      <DependentUpon>InOutStockManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PageNavigator.resx">
       <DependentUpon>PageNavigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,15 +165,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProcuctManager\ProductManager.resx">
       <DependentUpon>ProductManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QureyManager\SkuQuery.resx">
-      <DependentUpon>SkuQuery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StockManager\StockManager.resx">
-      <DependentUpon>StockManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\SystemManager\SkuManager.resx">
-      <DependentUpon>SkuManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>

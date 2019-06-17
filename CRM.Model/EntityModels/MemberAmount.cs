@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class Order
+    public class MemberAmount
     {
         /// <summary>
         /// 
@@ -17,14 +17,18 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public int ProductID { get; set; }
+        public decimal Amount { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public short Discount { get; set; }
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public DateTime? CreateTime { get; set; }
+        public DateTime ModifyTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string TimeStamp { get; set; }
     }
 }

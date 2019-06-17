@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CRM.BLL.SystemManager;
+﻿using CRM.BLL.ProductManager;
 using CRM.Model.EntityModels;
-using DevExpress.XtraEditors;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
-using CRM.BLL.ProductManager;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace CRM.UserControls.ProcuctManager
 {
@@ -104,23 +98,23 @@ namespace CRM.UserControls.ProcuctManager
             {
                 ProductEdit productEdit = new ProcuctManager.ProductEdit();
                 Product product = this.gridViewProduct.GetRow(this.gridViewProduct.FocusedRowHandle) as Product;
-                if (_bll.Delete(product) > 0)
-                {
-                    XtraMessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK);
-                    InitData(this.pageNavigator1.Skip,this.pageNavigator1.Take);
-                }
+                //if (_bll.Delete(product) > 0)
+                //{
+                //    XtraMessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK);
+                //    InitData(this.pageNavigator1.Skip,this.pageNavigator1.Take);
+                //}
             }
         }
 
         private void InitData(int skip,int take)
         {
-            Tuple<int, List<ProductVM>> result = _bll.LoadData(new ProductQM()
-            {
-                Skip = skip,
-                Take = take
-            });
-            this.pageNavigator1.Total = result.Item1;
-            this.gridProduct.DataSource = result.Item2;
+            //Tuple<int, List<ProductVM>> result = _bll.LoadData(new ProductQM()
+            //{
+            //    Skip = skip,
+            //    Take = take
+            //});
+            //this.pageNavigator1.Total = result.Item1;
+            //this.gridProduct.DataSource = result.Item2;
         }
 
         private void pageNavigator1_PageIndexChanged(int take, int skip)
@@ -141,10 +135,10 @@ namespace CRM.UserControls.ProcuctManager
             qm.ProductName = this.teProductName.Text.Trim();
             qm.ProductStyle = this.teProductStyle.Text.Trim();
             qm.Code = this.teBarCode.Text.Trim();
-            Tuple<int, List<ProductVM>> result = _bll.LoadData(qm);
-            this.gridProduct.DataSource = null;
-            this.pageNavigator1.Total = result.Item1;
-            this.gridProduct.DataSource = result.Item2;
+            //Tuple<int, List<ProductVM>> result = _bll.LoadData(qm);
+            //this.gridProduct.DataSource = null;
+            //this.pageNavigator1.Total = result.Item1;
+            //this.gridProduct.DataSource = result.Item2;
         }
 
         //没有查询到数据时候，显示提示

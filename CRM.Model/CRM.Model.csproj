@@ -44,20 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityModels\BarCode.cs" />
-    <Compile Include="EntityModels\Check.cs" />
-    <Compile Include="EntityModels\InOutStock.cs" />
-    <Compile Include="EntityModels\InOutStockDetail.cs" />
+    <Compile Include="EntityModels\BonusPoints.cs" />
+    <Compile Include="EntityModels\Deposit.cs" />
+    <Compile Include="EntityModels\Exchange.cs" />
+    <Compile Include="EntityModels\Member.cs" />
+    <Compile Include="EntityModels\MemberAmount.cs" />
     <Compile Include="EntityModels\Order.cs" />
-    <Compile Include="EntityModels\OrderDetail.cs" />
     <Compile Include="EntityModels\Product.cs" />
+    <Compile Include="EntityModels\SystemCode.cs" />
+    <Compile Include="EntityModels\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EntityModels\Sku.cs" />
-    <Compile Include="EntityModels\Stock.cs" />
     <Compile Include="QueryModels\PageInfo.cs" />
     <Compile Include="QueryModels\ProductQM.cs" />
     <Compile Include="ViewModels\ProductVM.cs" />
-    <Compile Include="ViewModels\SkuVM.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

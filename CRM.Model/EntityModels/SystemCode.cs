@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace CRM.Model.ViewModels
+namespace CRM.Model.EntityModels
 {
-    public class SkuVM
+    public class SystemCode
     {
         /// <summary>
         /// 
@@ -15,12 +13,14 @@ namespace CRM.Model.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public Guid GUID { get; set; }
+        public string CodeName { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string Unit { get; set; }
-        public bool Checked { get; set; }
-
+        public int CodeValue { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Description { get; set; }
     }
 }
