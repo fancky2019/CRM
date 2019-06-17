@@ -19,3 +19,14 @@ D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Debug\CRM.Common.csproj.CoreCompileInp
 D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Debug\CRM.Common.csproj.CopyComplete
 D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Debug\CRM.Common.dll
 D:\Work\Project\Git\C#\CRM\CRM.Common\obj\Debug\CRM.Common.pdb
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\CRM.Common.dll
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\CRM.Common.pdb
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\AutoMapper.dll
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\log4net.dll
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\AutoMapper.xml
+D:\fancky\C#\CRM\CRM.Common\bin\Debug\log4net.xml
+D:\fancky\C#\CRM\CRM.Common\obj\Debug\CRM.Common.csprojAssemblyReference.cache
+D:\fancky\C#\CRM\CRM.Common\obj\Debug\CRM.Common.csproj.CoreCompileInputs.cache
+D:\fancky\C#\CRM\CRM.Common\obj\Debug\CRM.Common.csproj.CopyComplete
+D:\fancky\C#\CRM\CRM.Common\obj\Debug\CRM.Common.dll
+D:\fancky\C#\CRM\CRM.Common\obj\Debug\CRM.Common.pdb
