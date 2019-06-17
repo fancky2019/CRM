@@ -29,36 +29,75 @@
         private void InitializeComponent()
         {
             this.sbtnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.teProductStyle = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.tePrice = new DevExpress.XtraEditors.TextEdit();
             this.teProcuctName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.slueStock = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.meDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.slueSku = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.teProductStyle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProcuctName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueStock.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSku.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnSave
             // 
-            this.sbtnSave.Location = new System.Drawing.Point(236, 183);
+            this.sbtnSave.Location = new System.Drawing.Point(236, 178);
             this.sbtnSave.Name = "sbtnSave";
             this.sbtnSave.Size = new System.Drawing.Size(53, 23);
             this.sbtnSave.TabIndex = 11;
             this.sbtnSave.Text = "保存";
             this.sbtnSave.Click += new System.EventHandler(this.sbtnSave_Click);
             // 
+            // teProductStyle
+            // 
+            this.teProductStyle.Location = new System.Drawing.Point(88, 110);
+            this.teProductStyle.Name = "teProductStyle";
+            this.teProductStyle.Size = new System.Drawing.Size(200, 20);
+            this.teProductStyle.TabIndex = 4;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(22, 115);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(60, 14);
+            this.labelControl4.TabIndex = 7;
+            this.labelControl4.Text = "产品型号：";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(35, 85);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(36, 14);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "库位：";
+            // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(46, 55);
+            this.labelControl8.Location = new System.Drawing.Point(35, 55);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(36, 14);
             this.labelControl8.TabIndex = 14;
-            this.labelControl8.Text = "价格：";
+            this.labelControl8.Text = "单位：";
             // 
             // labelControl3
             // 
@@ -72,7 +111,7 @@
             // 
             // tePrice
             // 
-            this.tePrice.Location = new System.Drawing.Point(89, 52);
+            this.tePrice.Location = new System.Drawing.Point(88, 139);
             this.tePrice.Name = "tePrice";
             this.tePrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.tePrice.Size = new System.Drawing.Size(200, 20);
@@ -87,25 +126,72 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(293, 55);
+            this.labelControl6.Location = new System.Drawing.Point(294, 142);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(12, 14);
+            this.labelControl6.Size = new System.Drawing.Size(7, 14);
             this.labelControl6.TabIndex = 10;
-            this.labelControl6.Text = "元";
+            this.labelControl6.Text = "$";
+            // 
+            // slueStock
+            // 
+            this.slueStock.EditValue = "";
+            this.slueStock.Location = new System.Drawing.Point(88, 81);
+            this.slueStock.Name = "slueStock";
+            this.slueStock.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueStock.Properties.DisplayMember = "StockName";
+            this.slueStock.Properties.NullText = "请选择库位";
+            this.slueStock.Properties.ValueMember = "ID";
+            this.slueStock.Properties.View = this.searchLookUpEdit1View;
+            this.slueStock.Size = new System.Drawing.Size(200, 20);
+            this.slueStock.TabIndex = 12;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "ID";
+            this.gridColumn1.FieldName = "ID";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "库位名称";
+            this.gridColumn2.FieldName = "StockName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "库位位置";
+            this.gridColumn3.FieldName = "Location";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(23, 123);
+            this.labelControl5.Location = new System.Drawing.Point(22, 145);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(60, 14);
             this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "产品描述：";
+            this.labelControl5.Text = "产品价格：";
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(308, 55);
+            this.labelControl7.Location = new System.Drawing.Point(307, 145);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(7, 14);
             this.labelControl7.TabIndex = 13;
@@ -119,33 +205,86 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "产品名称：";
             // 
-            // meDescription
+            // labelControl9
             // 
-            this.meDescription.Location = new System.Drawing.Point(89, 78);
-            this.meDescription.Name = "meDescription";
-            this.meDescription.Size = new System.Drawing.Size(200, 96);
-            this.meDescription.TabIndex = 15;
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl9.Appearance.Options.UseForeColor = true;
+            this.labelControl9.Location = new System.Drawing.Point(294, 58);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(7, 14);
+            this.labelControl9.TabIndex = 17;
+            this.labelControl9.Text = "*";
+            // 
+            // slueSku
+            // 
+            this.slueSku.EditValue = "请选择单位";
+            this.slueSku.Location = new System.Drawing.Point(88, 52);
+            this.slueSku.Name = "slueSku";
+            this.slueSku.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueSku.Properties.DisplayMember = "Unit";
+            this.slueSku.Properties.NullText = "请选择库位";
+            this.slueSku.Properties.PopupFormMinSize = new System.Drawing.Size(200, 200);
+            this.slueSku.Properties.PopupFormSize = new System.Drawing.Size(200, 200);
+            this.slueSku.Properties.ValueMember = "ID";
+            this.slueSku.Properties.View = this.gridView1;
+            this.slueSku.Size = new System.Drawing.Size(200, 20);
+            this.slueSku.TabIndex = 18;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn4,
+            this.gridColumn5});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "ID";
+            this.gridColumn4.FieldName = "ID";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "单位名称";
+            this.gridColumn5.FieldName = "Unit";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 0;
+            this.gridColumn5.Width = 200;
             // 
             // ProductEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.meDescription);
+            this.Controls.Add(this.slueSku);
+            this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.slueStock);
             this.Controls.Add(this.sbtnSave);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.tePrice);
             this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.teProductStyle);
             this.Controls.Add(this.teProcuctName);
+            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "ProductEdit";
             this.Size = new System.Drawing.Size(327, 214);
             this.Load += new System.EventHandler(this.ProductEdit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.teProductStyle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProcuctName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueStock.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSku.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,14 +292,26 @@
 
         #endregion
         private DevExpress.XtraEditors.SimpleButton sbtnSave;
+        private DevExpress.XtraEditors.TextEdit teProductStyle;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit tePrice;
         private DevExpress.XtraEditors.TextEdit teProcuctName;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueStock;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.MemoEdit meDescription;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueSku;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

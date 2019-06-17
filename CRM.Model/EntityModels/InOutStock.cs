@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class Exchange
+    public class InOutStock
     {
         /// <summary>
         /// 
@@ -13,18 +13,22 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public int MemmberID { get; set; }
+        public Guid GUID { get; set; }
+        /// <summary>
+        /// 0、删除 1、正常
+        /// </summary>
+        public short Status { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal BonusPonitAmount { get; set; }
+        public DateTime CreateTime { get; set; }
         /// <summary>
-        /// 
+        /// 1、入库 2、出库
         /// </summary>
-        public decimal Money { get; set; }
+        public short Type { get; set; }
         /// <summary>
-        /// 
+        /// 0:未完成，1、已完成
         /// </summary>
-        public string CreateTime { get; set; }
+        public bool IsComplete { get; set; }
     }
 }
