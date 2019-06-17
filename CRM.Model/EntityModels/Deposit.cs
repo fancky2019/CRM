@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class OrderDetail
+    public class Deposit
     {
         /// <summary>
         /// 
@@ -13,26 +13,22 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public Guid GUID { get; set; }
+        public int MemberID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int OrderID { get; set; }
+        public decimal DepositAmount { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int ProductID { get; set; }
+        public decimal PayAmount { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Count { get; set; }
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal DealPrice { get; set; }
-        /// <summary>
-        /// 0、删除 1、正常
-        /// </summary>
-        public short Status { get; set; }
+        public string Remark { get; set; }
     }
 }
