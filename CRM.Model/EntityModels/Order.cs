@@ -13,22 +13,18 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public Guid GUID { get; set; }
+        public int MemberID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string OrderNumber { get; set; }
+        public int ProductID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        public short Discount { get; set; }
         /// <summary>
-        /// 1、销售单、2、退货单
+        /// 
         /// </summary>
-        public int OrderType { get; set; }
-        /// <summary>
-        /// 0、删除 1、正常
-        /// </summary>
-        public short Status { get; set; }
+        public DateTime? CreateTime { get; set; }
     }
 }
