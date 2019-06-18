@@ -107,6 +107,30 @@
     <Compile Include="UserControls\GridControlUserControl.Designer.cs">
       <DependentUpon>GridControlUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MemberManager\MemberDeposit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\MemberDeposit.Designer.cs">
+      <DependentUpon>MemberDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\MemberEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\MemberEdit.Designer.cs">
+      <DependentUpon>MemberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\MemberManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\MemberManager.Designer.cs">
+      <DependentUpon>MemberManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberManager\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PageNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GridControlUserControl.resx">
       <DependentUpon>GridControlUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberManager\MemberEdit.resx">
+      <DependentUpon>MemberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberManager\MemberManager.resx">
+      <DependentUpon>MemberManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberManager\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PageNavigator.resx">
       <DependentUpon>PageNavigator.cs</DependentUpon>

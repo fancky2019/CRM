@@ -36,11 +36,11 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.meDescription = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProcuctName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnSave
@@ -83,15 +83,15 @@
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(12, 14);
             this.labelControl6.TabIndex = 10;
-            this.labelControl6.Text = "元";
+            this.labelControl6.Text = "￥";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(22, 59);
+            this.labelControl5.Location = new System.Drawing.Point(46, 56);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(60, 14);
+            this.labelControl5.Size = new System.Drawing.Size(36, 14);
             this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "产品价格：";
+            this.labelControl5.Text = "价格：";
             // 
             // labelControl7
             // 
@@ -105,18 +105,18 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(22, 25);
+            this.labelControl1.Location = new System.Drawing.Point(46, 26);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 14);
+            this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "产品名称：";
+            this.labelControl1.Text = "名称：";
             // 
-            // memoEdit1
+            // meDescription
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(88, 82);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(200, 89);
-            this.memoEdit1.TabIndex = 14;
+            this.meDescription.Location = new System.Drawing.Point(88, 82);
+            this.meDescription.Name = "meDescription";
+            this.meDescription.Size = new System.Drawing.Size(200, 89);
+            this.meDescription.TabIndex = 14;
             // 
             // labelControl2
             // 
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.memoEdit1);
+            this.Controls.Add(this.meDescription);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.sbtnSave);
             this.Controls.Add(this.labelControl6);
@@ -145,7 +145,7 @@
             this.Load += new System.EventHandler(this.ProductEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProcuctName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meDescription.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +160,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit meDescription;
         private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

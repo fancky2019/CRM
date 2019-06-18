@@ -32,10 +32,10 @@ namespace CRM.UserControls.ProcuctManager
         private void sbtAdd_Click(object sender, EventArgs e)
         {
             ProductEdit productEdit = new ProcuctManager.ProductEdit();
-            FrmPop.Show(this, "新增产品", productEdit, (() =>
+            FrmPop.Show(this, "新增套餐", productEdit, (() =>
              {
                  InitData(this.pageNavigator1.Skip, this.pageNavigator1.Take);
-             }), productEdit.Width + 80, productEdit.Height + 100);
+             }));
 
         }
 
@@ -60,10 +60,10 @@ namespace CRM.UserControls.ProcuctManager
                     ProductVM product = this.gridViewProduct.GetRow(hInfo.RowHandle) as ProductVM;//获取选中行的实体
                     ProductEdit productEdit = new ProcuctManager.ProductEdit();
                     productEdit.Tag = product;
-                    FrmPop.Show(this, "编辑产品", productEdit, (() =>
+                    FrmPop.Show(this, "编辑套餐", productEdit, (() =>
                     {
                         InitData(this.pageNavigator1.Skip, this.pageNavigator1.Take);
-                    }), productEdit.Width + 80, productEdit.Height + 100);
+                    }));
                 }
             }
         }
@@ -84,37 +84,36 @@ namespace CRM.UserControls.ProcuctManager
         private void Edit()
         {
             ProductEdit productEdit = new ProcuctManager.ProductEdit();
-            Product product = this.gridViewProduct.GetRow(this.gridViewProduct.FocusedRowHandle) as Product;
+            ProductVM product = this.gridViewProduct.GetRow(this.gridViewProduct.FocusedRowHandle) as ProductVM;
             productEdit.Tag = product;
-            FrmPop.Show(this, "编辑产品", productEdit, (() =>
+            FrmPop.Show(this, "编辑套餐", productEdit, (() =>
             {
                 InitData(this.pageNavigator1.Skip, this.pageNavigator1.Take);
-            }), productEdit.Width + 80, productEdit.Height + 100);
+            }));
         }
 
         private void Delete()
         {
-            if (DialogResult.OK == XtraMessageBox.Show($"您确定要删除员该产品信息吗？", "警告", MessageBoxButtons.OKCancel))
+            if (DialogResult.OK == XtraMessageBox.Show($"您确定要删除该套餐信息吗？", "警告", MessageBoxButtons.OKCancel))
             {
-                ProductEdit productEdit = new ProcuctManager.ProductEdit();
-                Product product = this.gridViewProduct.GetRow(this.gridViewProduct.FocusedRowHandle) as Product;
-                //if (_bll.Delete(product) > 0)
-                //{
-                //    XtraMessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK);
-                //    InitData(this.pageNavigator1.Skip,this.pageNavigator1.Take);
-                //}
+                ProductVM product = this.gridViewProduct.GetRow(this.gridViewProduct.FocusedRowHandle) as ProductVM;
+                if (_bll.Delete(new Product { ID=product.ID}) > 0)
+                {
+                    XtraMessageBox.Show("删除成功！", "提示", MessageBoxButtons.OK);
+                    InitData(this.pageNavigator1.Skip, this.pageNavigator1.Take);
+                }
             }
         }
 
         private void InitData(int skip,int take)
         {
-            //Tuple<int, List<ProductVM>> result = _bll.LoadData(new ProductQM()
-            //{
-            //    Skip = skip,
-            //    Take = take
-            //});
-            //this.pageNavigator1.Total = result.Item1;
-            //this.gridProduct.DataSource = result.Item2;
+           var result = _bll.LoadData(new ProductQM()
+            {
+                Skip = skip,
+                Take = take
+            });
+            this.pageNavigator1.Total = result.Count;
+            this.gridProduct.DataSource = result.ListProductVM;
         }
 
         private void pageNavigator1_PageIndexChanged(int take, int skip)
@@ -133,11 +132,11 @@ namespace CRM.UserControls.ProcuctManager
             qm.Skip = 0;
             qm.Take = this.pageNavigator1.Take;
             qm.ProductName = this.teProductName.Text.Trim();
-       
-            //Tuple<int, List<ProductVM>> result = _bll.LoadData(qm);
-            //this.gridProduct.DataSource = null;
-            //this.pageNavigator1.Total = result.Item1;
-            //this.gridProduct.DataSource = result.Item2;
+
+            var result = _bll.LoadData(qm);
+            this.gridProduct.DataSource = null;
+            this.pageNavigator1.Total = result.Item1;
+            this.gridProduct.DataSource = result.Item2;
         }
 
         //没有查询到数据时候，显示提示

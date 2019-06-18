@@ -13,7 +13,7 @@ namespace CRM.Dal
     {
         public void Test()
         {
-            using (WMSDbContext dbContext = new Dal.WMSDbContext())
+            using (CRMDbContext dbContext = new Dal.CRMDbContext())
             {
 
             }

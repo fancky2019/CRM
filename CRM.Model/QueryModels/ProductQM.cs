@@ -12,10 +12,6 @@ namespace CRM.Model.QueryModels
         /// 
         /// </summary>
         public string ProductName { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string ProductStyle { get; set; }
-        public string Code { get; set; }
+
     }
 }

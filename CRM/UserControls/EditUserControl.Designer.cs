@@ -32,10 +32,10 @@
             // 
             // EditUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "EditUserControl";
-            this.Size = new System.Drawing.Size(630, 497);
+            this.Size = new System.Drawing.Size(612, 399);
             this.ResumeLayout(false);
 
         }

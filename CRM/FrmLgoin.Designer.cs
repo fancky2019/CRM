@@ -119,7 +119,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmLgoin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "登录";
             this.Load += new System.EventHandler(this.FrmLgoin_Load);
             this.Shown += new System.EventHandler(this.FrmLgoin_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.tePassword.Properties)).EndInit();
