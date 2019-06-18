@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using CRM.UserControls;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraTab;
 using System;
@@ -37,7 +38,7 @@ namespace CRM
             await Task.Run(() =>
             {
                 Type type = null;
-                if(e.Item.Tag==null)
+                if (e.Item.Tag == null)
                 {
                     return;
                 }
@@ -50,12 +51,12 @@ namespace CRM
                         break;
                     }
                 }
-                var control = Activator.CreateInstance(type);
+                object control = type != null ? Activator.CreateInstance(type) : new Developing();
                 this.BeginInvoke((MethodInvoker)(() =>
-                   {
-                       AddXtrTabPages(e.Item.Caption, control);
+                {
+                    AddXtrTabPages(e.Item.Caption, control);
 
-                   }));
+                }));
             });
             ssmAddItem.CloseWaitForm();
         }

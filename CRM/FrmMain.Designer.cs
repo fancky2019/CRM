@@ -107,7 +107,7 @@
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.Caption = "会员充值";
+            this.barButtonItem5.Caption = "充值统计";
             this.barButtonItem5.Id = 5;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -122,7 +122,7 @@
             // 
             // barButtonItem7
             // 
-            this.barButtonItem7.Caption = "消费记录";
+            this.barButtonItem7.Caption = "消费统计";
             this.barButtonItem7.Id = 7;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -160,7 +160,7 @@
             // 
             // barButtonItem10
             // 
-            this.barButtonItem10.Caption = "积分兑换";
+            this.barButtonItem10.Caption = "积分兑换统计";
             this.barButtonItem10.Id = 13;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;

@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace CRM.UserControls.MemberManager
 {
     /// <summary>
-    /// 重置
+    /// 积分兑换
     /// </summary>
-    public partial class MemberDeposit : EditUserControl
+    public partial class ConsumeStatistics : XtraUserControl
     {
-        public MemberDeposit()
+        public ConsumeStatistics()
         {
             InitializeComponent();
         }
