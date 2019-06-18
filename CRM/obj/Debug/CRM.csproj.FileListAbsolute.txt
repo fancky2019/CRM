@@ -367,7 +367,6 @@ D:\fancky\C#\CRM\CRM\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
 D:\fancky\C#\CRM\CRM\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
 D:\fancky\C#\CRM\CRM\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.csprojAssemblyReference.cache
-D:\fancky\C#\CRM\CRM\obj\Debug\CRM.Form1.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.FrmLgoin.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.FrmMain.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.FrmPop.resources
@@ -382,7 +381,6 @@ D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductEdit.resou
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductManager.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.WaitForm1.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.cache
-D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe.licenses
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.csproj.CoreCompileInputs.cache
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.csproj.CopyComplete
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe
