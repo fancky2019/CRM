@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\CheckOutManager\CheckOutManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CheckOutManager\CheckOutManager.Designer.cs">
+      <DependentUpon>CheckOutManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Developing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,11 +137,11 @@
     <Compile Include="UserControls\MemberManager\MemberManager.Designer.cs">
       <DependentUpon>MemberManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MemberManager\MemberExchange.cs">
+    <Compile Include="UserControls\MemberManager\BonusPointsExchange.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\MemberManager\MemberExchange.Designer.cs">
-      <DependentUpon>MemberExchange.cs</DependentUpon>
+    <Compile Include="UserControls\MemberManager\BonusPointsExchange.Designer.cs">
+      <DependentUpon>BonusPointsExchange.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PageNavigator.cs">
       <SubType>UserControl</SubType>
@@ -155,23 +161,29 @@
     <Compile Include="UserControls\ProcuctManager\ProductManager.Designer.cs">
       <DependentUpon>ProductManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\ConsumeStatistics.cs">
+    <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\ConsumeStatistics.Designer.cs">
-      <DependentUpon>ConsumeStatistics.cs</DependentUpon>
+    <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.Designer.cs">
+      <DependentUpon>CheckOutStatistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\ExchangeStatistics.cs">
+    <Compile Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\ExchangeStatistics.Designer.cs">
-      <DependentUpon>ExchangeStatistics.cs</DependentUpon>
+    <Compile Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.Designer.cs">
+      <DependentUpon>BonusPointsExchangeStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StatisticsReport\DepositStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\StatisticsReport\DepositStatistics.Designer.cs">
       <DependentUpon>DepositStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SystemManager\SystemUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SystemManager\SystemUser.Designer.cs">
+      <DependentUpon>SystemUser.cs</DependentUpon>
     </Compile>
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
@@ -214,8 +226,8 @@
     <EmbeddedResource Include="UserControls\MemberManager\MemberManager.resx">
       <DependentUpon>MemberManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\MemberManager\MemberExchange.resx">
-      <DependentUpon>MemberExchange.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\MemberManager\BonusPointsExchange.resx">
+      <DependentUpon>BonusPointsExchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PageNavigator.resx">
       <DependentUpon>PageNavigator.cs</DependentUpon>
@@ -226,11 +238,11 @@
     <EmbeddedResource Include="UserControls\ProcuctManager\ProductManager.resx">
       <DependentUpon>ProductManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StatisticsReport\ConsumeStatistics.resx">
-      <DependentUpon>ConsumeStatistics.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StatisticsReport\CheckOutStatistics.resx">
+      <DependentUpon>CheckOutStatistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StatisticsReport\ExchangeStatistics.resx">
-      <DependentUpon>ExchangeStatistics.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.resx">
+      <DependentUpon>BonusPointsExchangeStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StatisticsReport\DepositStatistics.resx">
       <DependentUpon>DepositStatistics.cs</DependentUpon>
