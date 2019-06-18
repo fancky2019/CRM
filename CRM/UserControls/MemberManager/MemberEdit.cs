@@ -71,7 +71,7 @@ namespace CRM.UserControls.ProcuctManager
             {
                 if (_memberManagerBll.Exist(member))
                 {
-                    XtraMessageBox.Show("改手机号已注册！", "提示", MessageBoxButtons.OK);
+                    XtraMessageBox.Show("该手机号已注册！", "提示", MessageBoxButtons.OK);
                     return;
                 }
                 result = _memberManagerBll.Add(member);
