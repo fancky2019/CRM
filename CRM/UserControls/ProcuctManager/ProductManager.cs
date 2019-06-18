@@ -133,8 +133,7 @@ namespace CRM.UserControls.ProcuctManager
             qm.Skip = 0;
             qm.Take = this.pageNavigator1.Take;
             qm.ProductName = this.teProductName.Text.Trim();
-            qm.ProductStyle = this.teProductStyle.Text.Trim();
-            qm.Code = this.teBarCode.Text.Trim();
+       
             //Tuple<int, List<ProductVM>> result = _bll.LoadData(qm);
             //this.gridProduct.DataSource = null;
             //this.pageNavigator1.Total = result.Item1;
