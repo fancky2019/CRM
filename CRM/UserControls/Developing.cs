@@ -8,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CRM.UserControls.MemberManager
+namespace CRM.UserControls
 {
-    /// <summary>
-    /// 重置
-    /// </summary>
-    public partial class MemberDeposit : EditUserControl
+    public partial class Developing : EditUserControl
     {
-        public MemberDeposit()
+        public Developing()
         {
             InitializeComponent();
         }

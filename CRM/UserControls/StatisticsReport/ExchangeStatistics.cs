@@ -11,9 +11,12 @@ using DevExpress.XtraEditors;
 
 namespace CRM.UserControls.MemberManager
 {
-    public partial class UserControl1 : XtraUserControl
+    /// <summary>
+    /// 积分兑换
+    /// </summary>
+    public partial class ExchangeStatistics : XtraUserControl
     {
-        public UserControl1()
+        public ExchangeStatistics()
         {
             InitializeComponent();
         }
