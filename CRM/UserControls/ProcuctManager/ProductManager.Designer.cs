@@ -41,9 +41,9 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -243,27 +243,6 @@
             this.gridColumn8.VisibleIndex = 2;
             this.gridColumn8.Width = 28;
             // 
-            // gridColumn5
-            // 
-            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn5.Caption = "描述";
-            this.gridColumn5.FieldName = "Description";
-            this.gridColumn5.MinWidth = 15;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowEdit = false;
-            this.gridColumn5.OptionsColumn.AllowFocus = false;
-            this.gridColumn5.OptionsColumn.AllowMove = false;
-            this.gridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
-            this.gridColumn5.OptionsFilter.AllowFilter = false;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 72;
-            // 
             // gridColumn9
             // 
             this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
@@ -273,7 +252,7 @@
             this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn9.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn9.Caption = "创建时间";
-            this.gridColumn9.DisplayFormat.FormatString = "yyyy-MM-dd hh:mm:ss";
+            this.gridColumn9.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss";
             this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn9.FieldName = "CreateTime";
             this.gridColumn9.MinWidth = 15;
@@ -295,7 +274,7 @@
             this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn10.Caption = "修改时间";
-            this.gridColumn10.DisplayFormat.FormatString = "yyyy-MM-dd hh:mm:ss";
+            this.gridColumn10.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn10.FieldName = "ModifyTime";
             this.gridColumn10.MinWidth = 15;
@@ -309,11 +288,32 @@
             this.gridColumn10.VisibleIndex = 5;
             this.gridColumn10.Width = 97;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn5.Caption = "描述";
+            this.gridColumn5.FieldName = "Description";
+            this.gridColumn5.MinWidth = 15;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.AllowFocus = false;
+            this.gridColumn5.OptionsColumn.AllowMove = false;
+            this.gridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn5.OptionsFilter.AllowFilter = false;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 72;
+            // 
             // pageNavigator1
             // 
             this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pageNavigator1.Location = new System.Drawing.Point(2, 573);
-            this.pageNavigator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageNavigator1.Margin = new System.Windows.Forms.Padding(4);
             this.pageNavigator1.Name = "pageNavigator1";
             this.pageNavigator1.Size = new System.Drawing.Size(810, 41);
             this.pageNavigator1.TabIndex = 0;

@@ -16,30 +16,16 @@ namespace CRM.Model.ViewModels
         /// 
         /// </summary>
         public Guid GUID { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public int? StockID { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public int? BarCodeID { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public int SkuID { get; set; }
+  
         /// <summary>
         /// 
         /// </summary>
         public string ProductName { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
-        public string ProductStyle { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public decimal? Price { get; set; }
+        public decimal Price { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -51,9 +37,11 @@ namespace CRM.Model.ViewModels
         /// </summary>
         public short Status { get; set; }
 
-        public int Count { get; set; }
-        public string Code { get; set; }
-        public string StockName { get; set; }
-        public string Unit { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Description { get; set; }
+
+
     }
 }

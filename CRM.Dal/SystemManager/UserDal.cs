@@ -11,7 +11,7 @@ namespace CRM.Dal.SystemManager
     {
         public User GetUser(string userName)
         {
-            using (WMSDbContext dbContext = new Dal.WMSDbContext())
+            using (CRMDbContext dbContext = new Dal.CRMDbContext())
             {
                 return dbContext.User.FirstOrDefault<User>(p => p.UserName == userName);
             }

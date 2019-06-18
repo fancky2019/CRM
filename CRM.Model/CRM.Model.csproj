@@ -54,8 +54,10 @@
     <Compile Include="EntityModels\SystemCode.cs" />
     <Compile Include="EntityModels\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryModels\MemberQM.cs" />
     <Compile Include="QueryModels\PageInfo.cs" />
     <Compile Include="QueryModels\ProductQM.cs" />
+    <Compile Include="ViewModels\MemberVM.cs" />
     <Compile Include="ViewModels\ProductVM.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

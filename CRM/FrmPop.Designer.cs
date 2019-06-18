@@ -35,7 +35,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 514);
-            this.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPop";

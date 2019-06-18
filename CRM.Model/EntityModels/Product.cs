@@ -13,7 +13,7 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public Guid? GUID { get; set; }
+        public Guid GUID { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -33,7 +33,7 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public string TimeStamp { get; set; }
+        public byte[] TimeStamp { get; set; }
         /// <summary>
         /// 
         /// </summary>

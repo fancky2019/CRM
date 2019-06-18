@@ -46,9 +46,6 @@ namespace CRM.Model.EntityModels
         /// 
         /// </summary>
         public string Remark { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string TimeStamp { get; set; }
+
     }
 }

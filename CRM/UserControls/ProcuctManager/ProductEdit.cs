@@ -22,40 +22,36 @@ namespace CRM.UserControls.ProcuctManager
         }
         private void ProductEdit_Load(object sender, EventArgs e)
         {
-            //this.slueStock.Properties.DataSource = _stockBll.LoadData();
-            //this.slueSku.Properties.DataSource = _skuBll.LoadData();
             if (this.Tag != null)
             {
                 ProductVM product = this.Tag as ProductVM;
                 this.teProcuctName.Text = product.ProductName;
-
                 this.tePrice.Text = product.Price.ToString();
-          
+                this.meDescription.Text = product.Description;
             }
         }
         private void sbtnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(teProcuctName.Text.Trim()))
             {
-                XtraMessageBox.Show("产品名称不能为空！", "提示", MessageBoxButtons.OK);
+                XtraMessageBox.Show("套餐名称不能为空！", "提示", MessageBoxButtons.OK);
                 return;
             }
-   
+
             if (string.IsNullOrEmpty(tePrice.Text.Trim()))
             {
-                XtraMessageBox.Show("产品价格不能为空！", "提示", MessageBoxButtons.OK);
+                XtraMessageBox.Show("套餐价格不能为空！", "提示", MessageBoxButtons.OK);
                 return;
             }
             Product product = new Product()
             {
                 ProductName = this.teProcuctName.Text.Trim(),
-
                 Price = decimal.Parse(this.tePrice.Text.Trim()),
-
                 GUID = Guid.NewGuid(),
                 CreateTime = DateTime.Now,
-                ModifyTime= DateTime.Now,
-                Status=1
+                ModifyTime = DateTime.Now,
+                Description = this.meDescription.Text.Trim(),
+                Status = 1
             };
             int result = 0;
             if (this.Tag != null)//编辑
@@ -63,17 +59,18 @@ namespace CRM.UserControls.ProcuctManager
                 var oldProduct = this.Tag as ProductVM;
                 product.GUID = oldProduct.GUID;
                 product.ID = oldProduct.ID;
+                product.CreateTime = oldProduct.CreateTime;
                 product.ModifyTime = DateTime.Now;
-                //result = _productBll.Update(product);
+                result = _productBll.Update(product);
             }
             else//新增
             {
-                //if(_productBll.Exist(product))
-                //{
-                //    XtraMessageBox.Show("已存在同型号的该产品！", "提示", MessageBoxButtons.OK);
-                //    return;
-                //}
-                //result = _productBll.Add(product);
+                if (_productBll.Exist(product))
+                {
+                    XtraMessageBox.Show("已存在同名称的该套餐！", "提示", MessageBoxButtons.OK);
+                    return;
+                }
+                result = _productBll.Add(product);
             }
             if (result > 0)
             {
