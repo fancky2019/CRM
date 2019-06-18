@@ -120,6 +120,8 @@
             this.Name = "FrmLgoin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmLgoin_Load);
+            this.Shown += new System.EventHandler(this.FrmLgoin_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.tePassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceRememberPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();

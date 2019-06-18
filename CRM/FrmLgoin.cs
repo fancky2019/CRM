@@ -54,5 +54,32 @@ namespace CRM
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
         }
+
+        private void FrmLgoin_Load(object sender, EventArgs e)
+        {
+       
+        }
+
+        //load事件时控件没有被显示，所以无法设置输入焦点。
+        private void FrmLgoin_Shown(object sender, EventArgs e)
+        {
+           //   this.Activate();  //当前窗体默认是激活
+            this.AcceptButton = this.sbtnLogin;//回车登录
+            bool empty = false;
+            if (string.IsNullOrEmpty(this.teUserName.Text.Trim()))
+            {
+                empty = true;
+                this.teUserName.Focus();
+            }
+            if (string.IsNullOrEmpty(this.teUserName.Text.Trim()))
+            {
+                empty = true;
+                this.teUserName.Focus();
+            }
+            if (!empty)
+            {
+                this.sbtnLogin.Focus();
+            }
+        }
     }
 }

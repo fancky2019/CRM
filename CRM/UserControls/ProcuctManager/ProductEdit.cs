@@ -28,10 +28,9 @@ namespace CRM.UserControls.ProcuctManager
             {
                 ProductVM product = this.Tag as ProductVM;
                 this.teProcuctName.Text = product.ProductName;
-                this.teProductStyle.Text = product.ProductStyle;
+
                 this.tePrice.Text = product.Price.ToString();
-                this.slueStock.EditValue = product.StockID;
-                this.slueSku.EditValue = product.SkuID;
+          
             }
         }
         private void sbtnSave_Click(object sender, EventArgs e)
@@ -41,11 +40,7 @@ namespace CRM.UserControls.ProcuctManager
                 XtraMessageBox.Show("产品名称不能为空！", "提示", MessageBoxButtons.OK);
                 return;
             }
-            if (slueSku.EditValue == null)
-            {
-                XtraMessageBox.Show("产品单位不能为空！", "提示", MessageBoxButtons.OK);
-                return;
-            }
+   
             if (string.IsNullOrEmpty(tePrice.Text.Trim()))
             {
                 XtraMessageBox.Show("产品价格不能为空！", "提示", MessageBoxButtons.OK);
