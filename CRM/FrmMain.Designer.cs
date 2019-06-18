@@ -111,6 +111,7 @@
             this.barButtonItem5.Id = 5;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem5.Tag = "DepositStatistics";
             // 
             // bbiSkuQuery
             // 
@@ -122,10 +123,11 @@
             // 
             // barButtonItem7
             // 
-            this.barButtonItem7.Caption = "消费统计";
+            this.barButtonItem7.Caption = "收银统计";
             this.barButtonItem7.Id = 7;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem7.Tag = "CheckOutStatistics";
             // 
             // barButtonItem2
             // 
@@ -133,7 +135,7 @@
             this.barButtonItem2.Id = 8;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem2.Tag = "SkuManager";
+            this.barButtonItem2.Tag = "SystemUser";
             // 
             // barButtonItem6
             // 
@@ -141,7 +143,7 @@
             this.barButtonItem6.Id = 9;
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem6.Tag = "ProductManager";
+            this.barButtonItem6.Tag = "CheckOutManager";
             // 
             // barButtonItem4
             // 
@@ -157,6 +159,7 @@
             this.barButtonItem9.Id = 12;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem9.Tag = "BonusPointsExchange";
             // 
             // barButtonItem10
             // 
@@ -164,6 +167,7 @@
             this.barButtonItem10.Id = 13;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem10.Tag = "BonusPointsExchangeStatistics";
             // 
             // ribbonPage6
             // 

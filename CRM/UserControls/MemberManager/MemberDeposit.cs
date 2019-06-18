@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace CRM.UserControls.MemberManager
 {
     /// <summary>
-    /// 重置
+    /// 充值
     /// </summary>
     public partial class MemberDeposit : EditUserControl
     {
