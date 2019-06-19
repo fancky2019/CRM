@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace WMS.UserControls.InOutStockManager
 {
-    public partial class CheckOutManager : EditUserControl
+    public partial class CheckOutManager : XtraUserControl
     {
         ProductManagerBll _productManagerBll = null;
      //   InOutStockManagerBll _inOutStockManagerBll = null;

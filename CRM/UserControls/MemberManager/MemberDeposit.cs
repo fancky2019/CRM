@@ -17,7 +17,7 @@ namespace CRM.UserControls.MemberManager
     /// <summary>
     /// 充值
     /// </summary>
-    public partial class MemberDeposit : EditUserControl
+    public partial class MemberDeposit : XtraUserControl
     {
         MemberManagerBll _memberManagerBll = null;
         public MemberDeposit()

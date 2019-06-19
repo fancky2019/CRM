@@ -384,7 +384,6 @@ D:\fancky\C#\CRM\CRM\obj\Debug\CRM.csproj.CopyComplete
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.pdb
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.ExchangeStatistics.resources
-D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.DepositStatistics.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe.licenses
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.Developing.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.BonusPointsExchange.resources
@@ -392,3 +391,4 @@ D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.CheckOutStatistics
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductManager.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutManager.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.MemberDeposit.resources
+D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.DepositStatistics.resources

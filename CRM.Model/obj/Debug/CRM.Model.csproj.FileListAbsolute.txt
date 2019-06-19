@@ -14,3 +14,4 @@ D:\fancky\C#\CRM\CRM.Model\bin\Debug\CRM.Model.pdb
 D:\fancky\C#\CRM\CRM.Model\obj\Debug\CRM.Model.csproj.CoreCompileInputs.cache
 D:\fancky\C#\CRM\CRM.Model\obj\Debug\CRM.Model.dll
 D:\fancky\C#\CRM\CRM.Model\obj\Debug\CRM.Model.pdb
+D:\fancky\C#\CRM\CRM.Model\obj\Debug\CRM.Model.csprojAssemblyReference.cache
