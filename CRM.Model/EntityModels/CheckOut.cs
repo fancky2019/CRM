@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class Order
+    public class CheckOut
     {
         /// <summary>
         /// 
