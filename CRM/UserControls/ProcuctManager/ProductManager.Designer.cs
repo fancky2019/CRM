@@ -53,6 +53,8 @@
             this.bbiUpdate = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teProductName.Properties)).BeginInit();
@@ -154,6 +156,8 @@
             this.gridColumn7,
             this.gridColumn1,
             this.gridColumn4,
+            this.gridColumn2,
+            this.gridColumn3,
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
@@ -199,7 +203,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 62;
+            this.gridColumn1.Width = 116;
             // 
             // gridColumn4
             // 
@@ -220,7 +224,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 62;
+            this.gridColumn4.Width = 116;
             // 
             // gridColumn8
             // 
@@ -232,16 +236,14 @@
             this.gridColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn8.Caption = "状态";
             this.gridColumn8.FieldName = "Status";
-            this.gridColumn8.MaxWidth = 30;
-            this.gridColumn8.MinWidth = 15;
+            this.gridColumn8.MaxWidth = 40;
+            this.gridColumn8.MinWidth = 40;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.OptionsColumn.AllowMove = false;
             this.gridColumn8.OptionsFilter.AllowFilter = false;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 2;
-            this.gridColumn8.Width = 28;
+            this.gridColumn8.Width = 40;
             // 
             // gridColumn9
             // 
@@ -263,7 +265,7 @@
             this.gridColumn9.OptionsFilter.AllowFilter = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 4;
-            this.gridColumn9.Width = 97;
+            this.gridColumn9.Width = 181;
             // 
             // gridColumn10
             // 
@@ -286,7 +288,7 @@
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 5;
-            this.gridColumn10.Width = 97;
+            this.gridColumn10.Width = 206;
             // 
             // gridColumn5
             // 
@@ -306,8 +308,8 @@
             this.gridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 72;
+            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.Width = 134;
             // 
             // pageNavigator1
             // 
@@ -388,6 +390,32 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "折扣";
+            this.gridColumn2.FieldName = "Discount";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.AllowFocus = false;
+            this.gridColumn2.OptionsColumn.AllowMove = false;
+            this.gridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "积分";
+            this.gridColumn3.FieldName = "BonusPoints";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsColumn.AllowMove = false;
+            this.gridColumn3.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 3;
+            // 
             // ProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -441,5 +469,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

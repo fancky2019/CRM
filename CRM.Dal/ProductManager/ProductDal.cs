@@ -27,6 +27,8 @@ namespace WMS.Dal.ProductManager
                                      GUID = p.GUID,
                                      ProductName = p.ProductName,
                                      Price = p.Price,
+                                     Discount=p.Discount,
+                                     BonusPoints=p.BonusPoints,
                                      CreateTime = p.CreateTime,
                                      ModifyTime = p.ModifyTime,
                                      Status = p.Status,
@@ -76,6 +78,8 @@ namespace WMS.Dal.ProductManager
                     Product pro = dbContext.Product.Where(p => p.ID == product.ID).FirstOrDefault();
                     pro.ProductName = product.ProductName;        
                     pro.Price = product.Price;
+                    pro.Discount = product.Discount;
+                    pro.BonusPoints = product.BonusPoints;
                     pro.Description = product.Description;
                     pro.ModifyTime = DateTime.Now;
                     dbContext.SaveChanges();

@@ -9,9 +9,8 @@ namespace CRM.UserControls.ProcuctManager
 {
     public partial class ProductEdit : EditUserControl
     {
-
         ProductManagerBll _productBll = null;
-
+        //((0.)|([1-9]\d*\.?))\d+
         public ProductEdit()
         {
             InitializeComponent();
@@ -26,7 +25,9 @@ namespace CRM.UserControls.ProcuctManager
             {
                 ProductVM product = this.Tag as ProductVM;
                 this.teProcuctName.Text = product.ProductName;
+                this.seDiscount.Text = product.Discount.ToString();
                 this.tePrice.Text = product.Price.ToString();
+                this.teBonusPoints.Text = product.BonusPoints.ToString();
                 this.meDescription.Text = product.Description;
             }
         }
@@ -47,6 +48,8 @@ namespace CRM.UserControls.ProcuctManager
             {
                 ProductName = this.teProcuctName.Text.Trim(),
                 Price = decimal.Parse(this.tePrice.Text.Trim()),
+                Discount = (short)this.seDiscount.Value,
+                BonusPoints = decimal.Parse(this.teBonusPoints.Text),
                 GUID = Guid.NewGuid(),
                 CreateTime = DateTime.Now,
                 ModifyTime = DateTime.Now,

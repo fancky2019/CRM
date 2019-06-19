@@ -53,9 +53,9 @@
             // 
             // sbtnSave
             // 
-            this.sbtnSave.Location = new System.Drawing.Point(498, 213);
+            this.sbtnSave.Location = new System.Drawing.Point(581, 248);
             this.sbtnSave.Name = "sbtnSave";
-            this.sbtnSave.Size = new System.Drawing.Size(53, 23);
+            this.sbtnSave.Size = new System.Drawing.Size(62, 27);
             this.sbtnSave.TabIndex = 11;
             this.sbtnSave.Text = "保存";
             this.sbtnSave.Click += new System.EventHandler(this.sbtnSave_Click);
@@ -64,7 +64,7 @@
             // 
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(258, 29);
+            this.labelControl3.Location = new System.Drawing.Point(301, 34);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(7, 14);
             this.labelControl3.TabIndex = 6;
@@ -72,22 +72,24 @@
             // 
             // tePhoneNumber
             // 
-            this.tePhoneNumber.Location = new System.Drawing.Point(51, 53);
+            this.tePhoneNumber.Location = new System.Drawing.Point(59, 62);
             this.tePhoneNumber.Name = "tePhoneNumber";
+            this.tePhoneNumber.Properties.Mask.EditMask = "\\d+";
+            this.tePhoneNumber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.tePhoneNumber.Properties.MaxLength = 11;
-            this.tePhoneNumber.Size = new System.Drawing.Size(200, 20);
+            this.tePhoneNumber.Size = new System.Drawing.Size(233, 20);
             this.tePhoneNumber.TabIndex = 9;
             // 
             // teUserName
             // 
-            this.teUserName.Location = new System.Drawing.Point(50, 23);
+            this.teUserName.Location = new System.Drawing.Point(58, 27);
             this.teUserName.Name = "teUserName";
-            this.teUserName.Size = new System.Drawing.Size(201, 20);
+            this.teUserName.Size = new System.Drawing.Size(234, 20);
             this.teUserName.TabIndex = 3;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(13, 56);
+            this.labelControl5.Location = new System.Drawing.Point(15, 65);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(36, 14);
             this.labelControl5.TabIndex = 8;
@@ -97,7 +99,7 @@
             // 
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(257, 59);
+            this.labelControl7.Location = new System.Drawing.Point(300, 69);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(7, 14);
             this.labelControl7.TabIndex = 13;
@@ -105,7 +107,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 26);
+            this.labelControl1.Location = new System.Drawing.Point(15, 30);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 1;
@@ -113,14 +115,14 @@
             // 
             // meRemark
             // 
-            this.meRemark.Location = new System.Drawing.Point(51, 113);
+            this.meRemark.Location = new System.Drawing.Point(59, 132);
             this.meRemark.Name = "meRemark";
-            this.meRemark.Size = new System.Drawing.Size(506, 89);
+            this.meRemark.Size = new System.Drawing.Size(590, 104);
             this.meRemark.TabIndex = 14;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(13, 138);
+            this.labelControl2.Location = new System.Drawing.Point(15, 161);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(36, 14);
             this.labelControl2.TabIndex = 15;
@@ -128,7 +130,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(280, 26);
+            this.labelControl4.Location = new System.Drawing.Point(327, 30);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 14);
             this.labelControl4.TabIndex = 16;
@@ -136,14 +138,14 @@
             // 
             // tePassword
             // 
-            this.tePassword.Location = new System.Drawing.Point(356, 23);
+            this.tePassword.Location = new System.Drawing.Point(415, 27);
             this.tePassword.Name = "tePassword";
-            this.tePassword.Size = new System.Drawing.Size(201, 20);
+            this.tePassword.Size = new System.Drawing.Size(234, 20);
             this.tePassword.TabIndex = 17;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(292, 56);
+            this.labelControl6.Location = new System.Drawing.Point(341, 65);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(48, 14);
             this.labelControl6.TabIndex = 18;
@@ -151,14 +153,14 @@
             // 
             // teIDCard
             // 
-            this.teIDCard.Location = new System.Drawing.Point(356, 53);
+            this.teIDCard.Location = new System.Drawing.Point(415, 62);
             this.teIDCard.Name = "teIDCard";
-            this.teIDCard.Size = new System.Drawing.Size(201, 20);
+            this.teIDCard.Size = new System.Drawing.Size(234, 20);
             this.teIDCard.TabIndex = 19;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(13, 84);
+            this.labelControl8.Location = new System.Drawing.Point(15, 98);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(36, 14);
             this.labelControl8.TabIndex = 20;
@@ -166,14 +168,14 @@
             // 
             // teAddress
             // 
-            this.teAddress.Location = new System.Drawing.Point(51, 87);
+            this.teAddress.Location = new System.Drawing.Point(59, 101);
             this.teAddress.Name = "teAddress";
-            this.teAddress.Size = new System.Drawing.Size(506, 20);
+            this.teAddress.Size = new System.Drawing.Size(590, 20);
             this.teAddress.TabIndex = 21;
             // 
             // MemberEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.teAddress);
             this.Controls.Add(this.labelControl8);
@@ -191,7 +193,7 @@
             this.Controls.Add(this.teUserName);
             this.Controls.Add(this.labelControl1);
             this.Name = "MemberEdit";
-            this.Size = new System.Drawing.Size(571, 250);
+            this.Size = new System.Drawing.Size(666, 292);
             this.Load += new System.EventHandler(this.ProductEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
