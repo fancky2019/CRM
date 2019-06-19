@@ -19,5 +19,10 @@ namespace CRM.UserControls.MemberManager
         {
             InitializeComponent();
         }
+
+        private void SbtnDeposit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

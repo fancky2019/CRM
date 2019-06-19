@@ -389,5 +389,5 @@ D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe.licenses
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.Developing.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.BonusPointsExchange.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.CheckOutStatistics.resources
-D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.CheckOutManager.CheckOutManager.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductManager.resources
+D:\fancky\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutManager.resources
