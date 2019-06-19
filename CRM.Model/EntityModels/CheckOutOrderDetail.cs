@@ -31,6 +31,10 @@ namespace CRM.Model.EntityModels
         /// </summary>
         public decimal RealityPrice { get; set; }
         /// <summary>
+        /// 积分
+        /// </summary>
+        public decimal BonusPoints { get; set; }
+        /// <summary>
         /// 
         /// </summary>
         public DateTime CreateTime { get; set; }
