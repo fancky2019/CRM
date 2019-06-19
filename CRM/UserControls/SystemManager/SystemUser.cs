@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace CRM.UserControls.SystemManager
 {
-    public partial class SystemUser : EditUserControl
+    public partial class SystemUser : XtraUserControl
     {
         public SystemUser()
         {

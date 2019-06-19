@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CRM.UserControls.ProcuctManager
 {
-    public partial class ProductManager : UserControl
+    public partial class ProductManager : XtraUserControl
     {
         ProductManagerBll _bll = null;
         public ProductManager()
