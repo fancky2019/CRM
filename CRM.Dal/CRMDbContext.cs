@@ -37,7 +37,7 @@ namespace CRM.Dal
         public virtual DbSet<Exchange> Exchange { get; set; }
         public virtual DbSet<Member> Member { get; set; }
         public virtual DbSet<MemberAmount> MemberAmount { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<CheckOut> Order { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<SystemCode> SystemCode { get; set; }
         public virtual DbSet<User> User { get; set; }

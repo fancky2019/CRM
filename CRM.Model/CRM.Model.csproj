@@ -49,7 +49,7 @@
     <Compile Include="EntityModels\Exchange.cs" />
     <Compile Include="EntityModels\Member.cs" />
     <Compile Include="EntityModels\MemberAmount.cs" />
-    <Compile Include="EntityModels\Order.cs" />
+    <Compile Include="EntityModels\CheckOut.cs" />
     <Compile Include="EntityModels\Product.cs" />
     <Compile Include="EntityModels\SystemCode.cs" />
     <Compile Include="EntityModels\User.cs" />
