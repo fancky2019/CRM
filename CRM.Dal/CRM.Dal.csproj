@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="MemberManager\DepositDal.cs" />
     <Compile Include="MemberManager\MemberDal.cs" />
     <Compile Include="ProductManager\ProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

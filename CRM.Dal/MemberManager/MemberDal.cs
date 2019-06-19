@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace WMS.Dal.ProductManager
+namespace CRM.Dal.MemberManager
 {
     public class MemberDal
     {
@@ -136,6 +136,21 @@ namespace WMS.Dal.ProductManager
             }
         }
 
+        public Member GetMemberByPhoneNumber(string phoneNumber)
+        {
+            try
+            {
+                using (CRMDbContext dbContext = new CRMDbContext())
+                {
+                     return dbContext.Member.FirstOrDefault(p => p.PhoneNumber == phoneNumber);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error<MemberDal>(ex.ToString());
+                return null;
+            }
+        }
         public List<MemberVM> QueryWithNoPage(MemberQM qm)
         {
             try
@@ -163,11 +178,11 @@ namespace WMS.Dal.ProductManager
                     }
                     if (!string.IsNullOrEmpty(qm.PhoneNumber))
                     {
-                        result = result.Where(p => p.UserName.Contains(qm.PhoneNumber));
+                        result = result.Where(p => p.PhoneNumber.Contains(qm.PhoneNumber));
                     }
                     if (!string.IsNullOrEmpty(qm.IDCard))
                     {
-                        result = result.Where(p => p.UserName.Contains(qm.IDCard));
+                        result = result.Where(p => p.IDCard.Contains(qm.IDCard));
                     }
                     return result.ToList();
                 }
