@@ -1,5 +1,7 @@
-﻿using CRM.BLL.ProductManager;
+﻿using CRM.BLL.CheckOutManager;
+using CRM.BLL.ProductManager;
 using CRM.Common;
+using CRM.Model.EntityModels;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
 using CRM.UserControls;
@@ -17,14 +19,23 @@ namespace WMS.UserControls.InOutStockManager
     public partial class CheckOutManager : XtraUserControl
     {
         ProductManagerBll _productManagerBll = null;
-     //   InOutStockManagerBll _inOutStockManagerBll = null;
+        //   InOutStockManagerBll _inOutStockManagerBll = null;
         List<ProductVM> _selectedProduct = null;
+
+        MemberManagerBll _memberManagerBll = null;
+        CheckOutManagerBll _checkOutManagerBll = null;
+
+        MemberAmountVM _memberAmountVM = null;
         public CheckOutManager()
         {
             InitializeComponent();
             _productManagerBll = new ProductManagerBll();
-           // _inOutStockManagerBll = new InOutStockManagerBll();
+            // _inOutStockManagerBll = new InOutStockManagerBll();
             _selectedProduct = new List<ProductVM>();
+
+            CheckOutManagerBll _checkOutManagerBll = null;
+            _checkOutManagerBll = new CheckOutManagerBll();
+            _memberManagerBll = new MemberManagerBll();
 
         }
         private void InOutStockEdit_Load(object sender, EventArgs e)
@@ -43,6 +54,30 @@ namespace WMS.UserControls.InOutStockManager
         }
         private void sbtnQuery_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(this.tePhoneNumber.Text.Trim()))
+            {
+                XtraMessageBox.Show($"请先填写会员手机号！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                Member member = _memberManagerBll.GetMemberByPhoneNumber(this.tePhoneNumber.Text.Trim());
+                if (member == null)
+                {
+                    XtraMessageBox.Show($"不存在手机号为{this.tePhoneNumber.Text.Trim()}的会员！", "提示", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+
+            if (_memberAmountVM==null)
+            {
+                _memberAmountVM = _checkOutManagerBll.GetMemberAmountByPhoneNumber(this.tePhoneNumber.Text.Trim());
+                if(_memberAmountVM==null)
+                {
+                    XtraMessageBox.Show($"您的余额为零请充值！", "提示", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             this.pageNavigator.Skip = 0;
             InitData();
         }
@@ -60,15 +95,15 @@ namespace WMS.UserControls.InOutStockManager
                 Skip = this.pageNavigator.Skip,
                 Take = this.pageNavigator.Take
             };
-           var result = _productManagerBll.LoadData(qm);
+            var result = _productManagerBll.LoadData(qm);
             this.pageNavigator.Total = result.Count;
             this.gridProductSource.DataSource = result.ListProductVM;
-            for(int j=0;j<_selectedProduct.Count;j++)
+            for (int j = 0; j < _selectedProduct.Count; j++)
             {
-                for(int i=0;i<gridViewProductSource.DataRowCount;i++)
+                for (int i = 0; i < gridViewProductSource.DataRowCount; i++)
                 {
                     ProductVM product = this.gridViewProductSource.GetRow(i) as ProductVM;//获取选中行的实体
-                    if (product.ID==_selectedProduct[j].ID)
+                    if (product.ID == _selectedProduct[j].ID)
                     {
                         this.gridViewProductSource.SelectRow(i);
                     }
@@ -160,7 +195,7 @@ namespace WMS.UserControls.InOutStockManager
             //    });
             //    result = _inOutStockManagerBll.UpdateInOutStockAndDetail(inOutStock, inOutStockDetailList);   
             //}
-          
+
             //if (result > 0)
             //{
             //    XtraMessageBox.Show($"保存成功！", "提示", MessageBoxButtons.OK);

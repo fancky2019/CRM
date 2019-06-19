@@ -487,8 +487,8 @@ namespace WMS.UserControls.InOutStockManager
             this.cmeInOut.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmeInOut.Properties.Items.AddRange(new object[] {
-            "入库",
-            "出库"});
+            "现金",
+            "积分"});
             this.cmeInOut.Properties.NullText = "请选择出入库类型";
             this.cmeInOut.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmeInOut.Size = new System.Drawing.Size(150, 20);
