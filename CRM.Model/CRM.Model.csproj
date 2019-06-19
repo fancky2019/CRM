@@ -58,6 +58,7 @@
     <Compile Include="QueryModels\PageInfo.cs" />
     <Compile Include="QueryModels\ProductQM.cs" />
     <Compile Include="ViewModels\DepositVM.cs" />
+    <Compile Include="ViewModels\MemberAmountVM.cs" />
     <Compile Include="ViewModels\MemberVM.cs" />
     <Compile Include="ViewModels\ProductVM.cs" />
   </ItemGroup>
