@@ -98,7 +98,7 @@
     <Compile Include="UserControls\CheckOutManager\CheckOutManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CheckOutManager\CheckOutManager.Designer.cs">
+    <Compile Include="UserControls\CheckOutManager\CheckOutManager.designer.cs">
       <DependentUpon>CheckOutManager.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Developing.cs">
@@ -222,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GridControlUserControl.resx">
       <DependentUpon>GridControlUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberManager\MemberDeposit.resx">
+      <DependentUpon>MemberDeposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MemberManager\MemberEdit.resx">
       <DependentUpon>MemberEdit.cs</DependentUpon>

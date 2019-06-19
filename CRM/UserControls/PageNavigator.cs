@@ -70,6 +70,12 @@ namespace CRM.UserControls
             {
                 return _skip;
             }
+            set
+            {
+                this._skip = value;
+                this._pageIndex = (_skip / this._take) + 1;
+                this.tePageIndex.Text = _pageIndex.ToString();
+            }
         }
 
         public PageNavigator()
