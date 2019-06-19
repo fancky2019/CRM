@@ -29,6 +29,6 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public string TimeStamp { get; set; }
+        public byte[] TimeStamp { get; set; }
     }
 }

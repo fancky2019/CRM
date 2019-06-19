@@ -15,9 +15,9 @@ namespace CRM.Model.EntityModels
         /// </summary>
         public int MemberID { get; set; }
         /// <summary>
-        /// 
+        /// 账号总金额
         /// </summary>
-        public decimal Amount { get; set; }
+        public decimal TotalAmount { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -29,6 +29,6 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public string TimeStamp { get; set; }
+        public byte[] TimeStamp { get; set; }
     }
 }
