@@ -23,12 +23,12 @@ namespace CRM.Model.EntityModels
         /// </summary>
         public short Discount { get; set; }
         /// <summary>
+        /// 实收金额
+        /// </summary>
+        public decimal RealityAmount { get; set; }
+        /// <summary>
         /// 
         /// </summary>
         public DateTime? CreateTime { get; set; }
-        /// <summary>
-        /// 实收金额
-        /// </summary>
-        public decimal Amount { get; set; }
     }
 }
