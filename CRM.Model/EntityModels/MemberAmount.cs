@@ -21,6 +21,10 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
+        public decimal TotalBonusPoints { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public DateTime CreateTime { get; set; }
         /// <summary>
         /// 

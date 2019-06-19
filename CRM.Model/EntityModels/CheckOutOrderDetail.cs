@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class BonusPoints
+    public class CheckOutOrderDetail
     {
         /// <summary>
         /// 
@@ -13,22 +13,26 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public int MemberID { get; set; }
+        public int CheckOutOrderID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal Amount { get; set; }
+        public int ProductID { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public short Discount { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal DiscountPrice { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal RealityPrice { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public DateTime CreateTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime ModifyTime { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public byte[] TimeStamp { get; set; }
     }
 }

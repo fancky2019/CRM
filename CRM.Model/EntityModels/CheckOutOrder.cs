@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CRM.Model.EntityModels
 {
-    public class Exchange
+    public class CheckOutOrder
     {
         /// <summary>
         /// 
@@ -13,18 +13,22 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
-        public int MemmberID { get; set; }
+        public int MemberID { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal BonusPonitAmount { get; set; }
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public decimal Money { get; set; }
+        public string ModifyTime { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public string CreateTime { get; set; }
+        public short Status { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public short Type { get; set; }
     }
 }

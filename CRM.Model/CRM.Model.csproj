@@ -44,10 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityModels\BonusPoints.cs" />
-    <Compile Include="EntityModels\CheckOut.cs" />
+    <Compile Include="EntityModels\CheckOutOrder.cs" />
+    <Compile Include="EntityModels\CheckOutOrderDetail.cs" />
     <Compile Include="EntityModels\Deposit.cs" />
-    <Compile Include="EntityModels\Exchange.cs" />
     <Compile Include="EntityModels\Member.cs" />
     <Compile Include="EntityModels\MemberAmount.cs" />
     <Compile Include="EntityModels\Product.cs" />

@@ -32,12 +32,11 @@ namespace CRM.Dal
             //modelBuilder.Entity<Spouse>().ToTable("Spouse", "dbo");
         }
 
-        public virtual DbSet<BonusPoints> BonusPoints { get; set; }
+        public virtual DbSet<CheckOutOrder> CheckOutOrder { get; set; }
+        public virtual DbSet<CheckOutOrderDetail> CheckOutOrderDetail { get; set; }
         public virtual DbSet<Deposit> Deposit { get; set; }
-        public virtual DbSet<Exchange> Exchange { get; set; }
         public virtual DbSet<Member> Member { get; set; }
         public virtual DbSet<MemberAmount> MemberAmount { get; set; }
-        public virtual DbSet<CheckOut> Order { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<SystemCode> SystemCode { get; set; }
         public virtual DbSet<User> User { get; set; }

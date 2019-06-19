@@ -211,6 +211,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\CheckOutManager\CheckOutManager.resx">
+      <DependentUpon>CheckOutManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Developing.resx">
       <DependentUpon>Developing.cs</DependentUpon>
     </EmbeddedResource>
