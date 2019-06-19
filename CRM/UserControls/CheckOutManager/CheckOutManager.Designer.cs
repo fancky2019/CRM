@@ -30,11 +30,11 @@ namespace WMS.UserControls.InOutStockManager
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.sbtnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -61,7 +61,7 @@ namespace WMS.UserControls.InOutStockManager
             this.teProductName = new DevExpress.XtraEditors.TextEdit();
             this.sbtnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.cmeInOut = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.tePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -90,7 +90,7 @@ namespace WMS.UserControls.InOutStockManager
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmeInOut.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -117,7 +117,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControl1.Controls.Add(this.teProductName);
             this.layoutControl1.Controls.Add(this.sbtnQuery);
             this.layoutControl1.Controls.Add(this.cmeInOut);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.tePhoneNumber);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -322,7 +322,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             this.ribeDelete.AutoHeight = false;
             this.ribeDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ribeDelete.Name = "ribeDelete";
             this.ribeDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ribeDelete.Click += new System.EventHandler(this.ribeDelete_Click);
@@ -469,7 +469,6 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // sbtnQuery
             // 
-            this.sbtnQuery.Enabled = false;
             this.sbtnQuery.Location = new System.Drawing.Point(252, 108);
             this.sbtnQuery.Margin = new System.Windows.Forms.Padding(4);
             this.sbtnQuery.Name = "sbtnQuery";
@@ -497,13 +496,13 @@ namespace WMS.UserControls.InOutStockManager
             this.cmeInOut.TabIndex = 9;
             this.cmeInOut.SelectedValueChanged += new System.EventHandler(this.cmeInOut_SelectedValueChanged);
             // 
-            // textEdit1
+            // tePhoneNumber
             // 
-            this.textEdit1.Location = new System.Drawing.Point(89, 43);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(140, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 17;
+            this.tePhoneNumber.Location = new System.Drawing.Point(89, 43);
+            this.tePhoneNumber.Name = "tePhoneNumber";
+            this.tePhoneNumber.Size = new System.Drawing.Size(140, 20);
+            this.tePhoneNumber.StyleController = this.layoutControl1;
+            this.tePhoneNumber.TabIndex = 17;
             // 
             // layoutControlGroup1
             // 
@@ -656,7 +655,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.textEdit1;
+            this.layoutControlItem7.Control = this.tePhoneNumber;
             this.layoutControlItem7.CustomizationFormText = "会员手机：";
             this.layoutControlItem7.FillControlToClientArea = false;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
@@ -734,7 +733,7 @@ namespace WMS.UserControls.InOutStockManager
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmeInOut.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -793,7 +792,7 @@ namespace WMS.UserControls.InOutStockManager
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ribeDelete;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit tePhoneNumber;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;

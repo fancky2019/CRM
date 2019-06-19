@@ -14,8 +14,27 @@ namespace CRM.Dal.MemberManager
         {
             try
             {
+                //EF6默认回创建事务
                 using (CRMDbContext dbContext = new CRMDbContext())
                 {
+           
+                    MemberAmount memberAmount = dbContext.MemberAmount.Where(p => p.MemberID == deposit.MemberID).FirstOrDefault();
+                    if(memberAmount==null)
+                    {
+                        memberAmount = new MemberAmount
+                        {
+                            MemberID = deposit.MemberID,
+                            TotalAmount = deposit.DepositAmount,
+                            CreateTime = DateTime.Now,
+                            ModifyTime=DateTime.Now
+                        };
+                        dbContext.MemberAmount.Add(memberAmount);
+                    }
+                    else
+                    {
+                        memberAmount.TotalAmount += deposit.DepositAmount;
+                        memberAmount.ModifyTime = DateTime.Now;
+                    }
                     dbContext.Deposit.Add(deposit);
                     dbContext.SaveChanges();
                     return 1;
