@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tePrice = new DevExpress.XtraEditors.TextEdit();
+            this.teDepositAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.tePayAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.tePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.meRemark = new DevExpress.XtraEditors.MemoEdit();
             this.sbtnDeposit = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::CRM.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
+            ((System.ComponentModel.ISupportInitialize)(this.teDepositAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePayAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meRemark.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // tePrice
+            // teDepositAmount
             // 
-            this.tePrice.EditValue = "";
-            this.tePrice.Location = new System.Drawing.Point(116, 104);
-            this.tePrice.Name = "tePrice";
-            this.tePrice.Properties.Mask.EditMask = "((0.)|([1-9]\\d*\\.?))\\d+";
-            this.tePrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.tePrice.Size = new System.Drawing.Size(433, 20);
-            this.tePrice.TabIndex = 10;
+            this.teDepositAmount.EditValue = "";
+            this.teDepositAmount.Location = new System.Drawing.Point(116, 104);
+            this.teDepositAmount.Name = "teDepositAmount";
+            this.teDepositAmount.Properties.Mask.EditMask = "((0.)|([1-9]\\d*\\.?))\\d+";
+            this.teDepositAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.teDepositAmount.Size = new System.Drawing.Size(433, 20);
+            this.teDepositAmount.TabIndex = 10;
             // 
             // labelControl5
             // 
@@ -72,15 +73,15 @@
             this.labelControl1.TabIndex = 12;
             this.labelControl1.Text = "实收金额：";
             // 
-            // textEdit1
+            // tePayAmount
             // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(116, 155);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Mask.EditMask = "((0.)|([1-9]\\d*\\.?))\\d+";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.textEdit1.Size = new System.Drawing.Size(433, 20);
-            this.textEdit1.TabIndex = 13;
+            this.tePayAmount.EditValue = "";
+            this.tePayAmount.Location = new System.Drawing.Point(116, 155);
+            this.tePayAmount.Name = "tePayAmount";
+            this.tePayAmount.Properties.Mask.EditMask = "((0.)|([1-9]\\d*\\.?))\\d+";
+            this.tePayAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.tePayAmount.Size = new System.Drawing.Size(433, 20);
+            this.tePayAmount.TabIndex = 13;
             // 
             // labelControl2
             // 
@@ -90,12 +91,12 @@
             this.labelControl2.TabIndex = 14;
             this.labelControl2.Text = "会员手机：";
             // 
-            // textEdit2
+            // tePhoneNumber
             // 
-            this.textEdit2.Location = new System.Drawing.Point(116, 52);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(433, 20);
-            this.textEdit2.TabIndex = 15;
+            this.tePhoneNumber.Location = new System.Drawing.Point(116, 52);
+            this.tePhoneNumber.Name = "tePhoneNumber";
+            this.tePhoneNumber.Size = new System.Drawing.Size(433, 20);
+            this.tePhoneNumber.TabIndex = 15;
             // 
             // labelControl3
             // 
@@ -151,6 +152,10 @@
             this.labelControl7.TabIndex = 21;
             this.labelControl7.Text = "*";
             // 
+            // splashScreenManager
+            // 
+            this.splashScreenManager.ClosingDelay = 500;
+            // 
             // MemberDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -161,17 +166,17 @@
             this.Controls.Add(this.sbtnDeposit);
             this.Controls.Add(this.meRemark);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.tePhoneNumber);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.tePayAmount);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.tePrice);
+            this.Controls.Add(this.teDepositAmount);
             this.Name = "MemberDeposit";
             this.Size = new System.Drawing.Size(595, 399);
-            ((System.ComponentModel.ISupportInitialize)(this.tePrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDepositAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePayAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meRemark.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,17 +185,18 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit tePrice;
+        private DevExpress.XtraEditors.TextEdit teDepositAmount;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit tePayAmount;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit tePhoneNumber;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.MemoEdit meRemark;
         private DevExpress.XtraEditors.SimpleButton sbtnDeposit;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
     }
 }
