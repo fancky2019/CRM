@@ -85,7 +85,7 @@
             this.ribbonPage3,
             this.ribbonPage5});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(890, 147);
+            this.ribbonControl1.Size = new System.Drawing.Size(980, 147);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ribbonControl1_ItemClick);
             // 
@@ -267,7 +267,7 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 147);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(890, 448);
+            this.xtraTabControl1.Size = new System.Drawing.Size(980, 555);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
             // 
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 595);
+            this.ClientSize = new System.Drawing.Size(980, 702);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;

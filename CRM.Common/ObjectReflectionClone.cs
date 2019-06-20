@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,10 +27,40 @@ namespace CRM.Common
                 var oValue = oPro.GetValue(oModel);
 
                 //复制给新的对象
-                oPro.SetValue(oRes, oValue);
+                if (oPro.CanWrite)
+                {
+                    oPro.SetValue(oRes, oValue);
+                }
             }
 
             return oRes;
+        }
+
+
+        /// <summary>
+        /// 深克隆
+        /// </summary>
+        /// <param name="obj">原始版本对象</param>
+        /// <returns>深克隆后的对象</returns>
+        public static T DepthClone<T>(this T obj) where T : class
+        {
+            T clone = Activator.CreateInstance<T>();
+            using (Stream stream = new MemoryStream())
+            {
+                IFormatter formatter = new BinaryFormatter();
+                try
+                {
+                    formatter.Serialize(stream, obj);
+                    stream.Seek(0, SeekOrigin.Begin);
+                    clone = (T)formatter.Deserialize(stream);
+                }
+                catch (SerializationException e)
+                {
+                    Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                    throw;
+                }
+            }
+            return clone;
         }
     }
 }

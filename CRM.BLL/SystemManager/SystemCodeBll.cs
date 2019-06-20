@@ -1,5 +1,6 @@
 ﻿using CRM.Dal.SystemManager;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 using System;
 using System.Collections.Generic;
 using System.Linq;

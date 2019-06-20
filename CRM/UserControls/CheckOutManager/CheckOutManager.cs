@@ -3,6 +3,7 @@ using CRM.BLL.ProductManager;
 using CRM.BLL.SystemManager;
 using CRM.Common;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
 using CRM.UserControls;
@@ -52,6 +53,7 @@ namespace WMS.UserControls.InOutStockManager
         {
             _checkOutTypeSystemCodeList = _systemCodeBll.GetSystemCode("CheckOutType");
             this.cbeCheckOutType.Properties.Items.AddRange(_checkOutTypeSystemCodeList.Select(p => p.DisplayName).ToList());
+            this.cbeCheckOutType.SelectedIndex = 0;
             //  lueCheckOutType.Properties.PopulateColumns();
             //InOutStockVM inOutStockVM = this.Tag as InOutStockVM;
             //if (inOutStockVM != null)
@@ -165,19 +167,26 @@ namespace WMS.UserControls.InOutStockManager
                 XtraMessageBox.Show($"套餐明细里没有产品，请添加套餐！", "提示", MessageBoxButtons.OK);
                 return;
             }
-            //List<InOutStockDetail> inOutStockDetailList = new List<InOutStockDetail>();//添加的产品
-            //_selectedProduct.ForEach(p =>
-            //{
-            //    inOutStockDetailList.Add(new InOutStockDetail()
-            //    {
-            //        GUID = Guid.NewGuid(),
-            //        CrateTime = DateTime.Now,
-            //        Count = p.Count,
-            //        ModifyTime = DateTime.Now,
-            //        ProductID = p.ID,
-            //        Status = 1
-            //    });
-            //});
+            if(string.IsNullOrEmpty(this.cbeCheckOutType.Text.Trim()))
+            {
+                XtraMessageBox.Show($"请选择支付类型！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
+            CheckOutOrderVM eckOutOrderVM = new CheckOutOrderVM
+            {
+                Type = _checkOutTypeSystemCodeList.First(p => p.DisplayName == this.cbeCheckOutType.Text).CodeValue,
+                Products = _selectedProduct,
+                CreateTime = DateTime.Now,
+                MemberID=this._memberAmountVM.MemberID,
+                ModifyTime = DateTime.Now,
+                Status=0
+
+            };
+
+
+
+          
             //InOutStockVM inOutStockVM = this.Tag as InOutStockVM;
             //InOutStock inOutStock = null;
             //int result = 0;
@@ -204,16 +213,15 @@ namespace WMS.UserControls.InOutStockManager
             //    });
             //    result = _inOutStockManagerBll.UpdateInOutStockAndDetail(inOutStock, inOutStockDetailList);   
             //}
-
-            //if (result > 0)
-            //{
-            //    XtraMessageBox.Show($"保存成功！", "提示", MessageBoxButtons.OK);
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    XtraMessageBox.Show($"保存失败！", "提示", MessageBoxButtons.OK);
-            //}
+            var result = _checkOutManagerBll.CheckOut(eckOutOrderVM);
+            if (result > 0)
+            {
+                XtraMessageBox.Show($"结账成功！", "提示", MessageBoxButtons.OK);
+            }
+            else
+            {
+                XtraMessageBox.Show($"结账失败！", "提示", MessageBoxButtons.OK);
+            }
         }
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
@@ -256,7 +264,7 @@ namespace WMS.UserControls.InOutStockManager
                 }
                 else
                 {
-                    ProductVM vm = product.CloneModel<ProductVM>();
+                    ProductVM vm = product.DepthClone<ProductVM>();
                     _selectedProduct.Add(vm);
                 }
 
@@ -283,9 +291,9 @@ namespace WMS.UserControls.InOutStockManager
             //{
             //    return;
             //}
-            ProductVM product = this.gridViewProductDetail.GetRow(this.gridViewProductDetail.FocusedRowHandle) as ProductVM;//获取选中行的实体
-            List<ProductVM> list = this.gridProductSource.DataSource as List<ProductVM>;
-            ProductVM sourceProduct = list.Where(p => p.ID == product.ID).FirstOrDefault();
+            //ProductVM product = this.gridViewProductDetail.GetRow(this.gridViewProductDetail.FocusedRowHandle) as ProductVM;//获取选中行的实体
+            //List<ProductVM> list = this.gridProductSource.DataSource as List<ProductVM>;
+            //ProductVM sourceProduct = list.Where(p => p.ID == product.ID).FirstOrDefault();
             //if (sourceProduct.Count < product.Count)
             //{
             //    if (this.cmeInOut.SelectedItem.ToString() == "出库")

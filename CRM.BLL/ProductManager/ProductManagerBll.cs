@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CRM.Dal;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
 using WMS.Dal.ProductManager;

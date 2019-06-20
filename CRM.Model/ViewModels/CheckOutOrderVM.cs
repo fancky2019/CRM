@@ -34,6 +34,6 @@ namespace CRM.Model.ViewModels
         /// </summary>
         public DateTime ModifyTime { get; set; }
 
-        public List<Product> Products { get; set; }
+        public List<ProductVM> Products { get; set; }
     }
 }
