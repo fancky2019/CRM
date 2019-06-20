@@ -21,7 +21,7 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 付款方式：0：现金，1：积分
         /// </summary>
-        public short Type { get; set; }
+        public int Type { get; set; }
         /// <summary>
         /// 
         /// </summary>
