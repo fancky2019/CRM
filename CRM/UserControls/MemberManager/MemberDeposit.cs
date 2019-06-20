@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using CRM.Model.EntityModels;
 using CRM.BLL.ProductManager;
 using CRM.Model.QueryModels;
+using CRM.Model.EntityModels.CRM;
 
 namespace CRM.UserControls.MemberManager
 {

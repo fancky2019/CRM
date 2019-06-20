@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRM.Model.ViewModels
 {
+    [Serializable]
     public class ProductVM
     {
         /// <summary>
@@ -32,6 +33,38 @@ namespace CRM.Model.ViewModels
         /// 
         /// </summary>
         public decimal BonusPoints { get; set; }
+
+        public decimal _discountPrice;
+        public decimal DiscountPrice
+        {
+            get
+            {
+                if (_discountPrice == 0)
+                {
+                    _discountPrice = Discount * Price/100;
+                }
+                return _discountPrice;
+            }
+        }
+
+
+        private decimal _realityPrice;
+        public decimal RealityPrice
+        {
+            get
+            {
+                if (_realityPrice == 0)
+                {
+                    _realityPrice = DiscountPrice;
+                }
+                return _realityPrice;
+            }
+            set
+            {
+                _realityPrice = value;
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>

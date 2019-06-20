@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 
 namespace CRM.Dal
 {
@@ -12,7 +13,7 @@ namespace CRM.Dal
         {
 
         }
-        public CRMDbContext() : base("name=WMSConnectionString")
+        public CRMDbContext() : base("name=CRMConnectionString")
         {
 
         }

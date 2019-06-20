@@ -1,5 +1,6 @@
 ﻿using CRM.BLL.ProductManager;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
 using DevExpress.XtraEditors;

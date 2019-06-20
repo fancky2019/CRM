@@ -44,14 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityModels\CheckOutOrder.cs" />
-    <Compile Include="EntityModels\CheckOutOrderDetail.cs" />
-    <Compile Include="EntityModels\Deposit.cs" />
-    <Compile Include="EntityModels\Member.cs" />
-    <Compile Include="EntityModels\MemberAmount.cs" />
-    <Compile Include="EntityModels\Product.cs" />
-    <Compile Include="EntityModels\SystemCode.cs" />
-    <Compile Include="EntityModels\User.cs" />
+    <Compile Include="EntityModels\CRM\CheckOutOrder.cs" />
+    <Compile Include="EntityModels\CRM\CheckOutOrderDetail.cs" />
+    <Compile Include="EntityModels\CRM\Deposit.cs" />
+    <Compile Include="EntityModels\CRM\Member.cs" />
+    <Compile Include="EntityModels\CRM\MemberAmount.cs" />
+    <Compile Include="EntityModels\CRM\Product.cs" />
+    <Compile Include="EntityModels\CRM\SystemCode.cs" />
+    <Compile Include="EntityModels\CRM\User.cs" />
+    <Compile Include="EntityModels\WMS\BarCode.cs" />
+    <Compile Include="EntityModels\WMS\Check.cs" />
+    <Compile Include="EntityModels\WMS\InOutStock.cs" />
+    <Compile Include="EntityModels\WMS\Order.cs" />
+    <Compile Include="EntityModels\WMS\OrderDetail.cs" />
+    <Compile Include="EntityModels\WMS\Product.cs" />
+    <Compile Include="EntityModels\WMS\Sku.cs" />
+    <Compile Include="EntityModels\WMS\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryModels\DepositQM.cs" />
     <Compile Include="QueryModels\MemberQM.cs" />

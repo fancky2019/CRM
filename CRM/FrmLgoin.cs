@@ -1,5 +1,6 @@
 ﻿using CRM.BLL.SystemManager;
 using CRM.Model.EntityModels;
+using CRM.Model.EntityModels.CRM;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
