@@ -38,6 +38,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.sbtnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.pageNavigator = new CRM.UserControls.PageNavigator();
             this.gridProductDetail = new DevExpress.XtraGrid.GridControl();
             this.gridViewProductDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcProductName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,16 +67,17 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.sliMemberCanUseInfo = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pageNavigator = new CRM.UserControls.PageNavigator();
+            this.sliMemberCanUseInfo = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.simpleLabelItem3 = new DevExpress.XtraLayout.SimpleLabelItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -95,15 +97,17 @@ namespace WMS.UserControls.InOutStockManager
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliMemberCanUseInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliMemberCanUseInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -120,7 +124,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(614, 176, 904, 557);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(839, 387, 904, 557);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(844, 700);
             this.layoutControl1.TabIndex = 0;
@@ -130,16 +134,16 @@ namespace WMS.UserControls.InOutStockManager
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.sbtnSave);
-            this.panelControl1.Location = new System.Drawing.Point(87, 652);
+            this.panelControl1.Location = new System.Drawing.Point(198, 652);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(733, 24);
+            this.panelControl1.Size = new System.Drawing.Size(622, 24);
             this.panelControl1.TabIndex = 16;
             // 
             // sbtnSave
             // 
             this.sbtnSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sbtnSave.Location = new System.Drawing.Point(657, 2);
+            this.sbtnSave.Location = new System.Drawing.Point(546, 2);
             this.sbtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.sbtnSave.Name = "sbtnSave";
             this.sbtnSave.Size = new System.Drawing.Size(74, 20);
@@ -147,17 +151,28 @@ namespace WMS.UserControls.InOutStockManager
             this.sbtnSave.Text = "结账";
             this.sbtnSave.Click += new System.EventHandler(this.sbtnSave_Click);
             // 
+            // pageNavigator
+            // 
+            this.pageNavigator.Location = new System.Drawing.Point(33, 286);
+            this.pageNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pageNavigator.Name = "pageNavigator";
+            this.pageNavigator.Size = new System.Drawing.Size(787, 31);
+            this.pageNavigator.Skip = 0;
+            this.pageNavigator.TabIndex = 15;
+            this.pageNavigator.Total = 0;
+            this.pageNavigator.PageIndexChanged += new System.Action<int, int>(this.pageNavigator1_PageIndexChanged);
+            // 
             // gridProductDetail
             // 
             this.gridProductDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridProductDetail.Location = new System.Drawing.Point(33, 355);
+            this.gridProductDetail.Location = new System.Drawing.Point(33, 364);
             this.gridProductDetail.MainView = this.gridViewProductDetail;
             this.gridProductDetail.Margin = new System.Windows.Forms.Padding(4);
             this.gridProductDetail.Name = "gridProductDetail";
             this.gridProductDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.ribeDelete});
-            this.gridProductDetail.Size = new System.Drawing.Size(787, 293);
+            this.gridProductDetail.Size = new System.Drawing.Size(787, 284);
             this.gridProductDetail.TabIndex = 7;
             this.gridProductDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProductDetail});
@@ -323,7 +338,7 @@ namespace WMS.UserControls.InOutStockManager
             this.gridProductSource.Name = "gridProductSource";
             this.gridProductSource.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridProductSource.Size = new System.Drawing.Size(787, 139);
+            this.gridProductSource.Size = new System.Drawing.Size(787, 148);
             this.gridProductSource.TabIndex = 4;
             this.gridProductSource.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProductSource});
@@ -469,19 +484,19 @@ namespace WMS.UserControls.InOutStockManager
             // 
             this.tePhoneNumber.Location = new System.Drawing.Point(89, 43);
             this.tePhoneNumber.Name = "tePhoneNumber";
-            this.tePhoneNumber.Size = new System.Drawing.Size(140, 20);
+            this.tePhoneNumber.Size = new System.Drawing.Size(133, 20);
             this.tePhoneNumber.StyleController = this.layoutControl1;
             this.tePhoneNumber.TabIndex = 17;
             // 
             // cbeCheckOutType
             // 
-            this.cbeCheckOutType.Location = new System.Drawing.Point(307, 43);
+            this.cbeCheckOutType.Location = new System.Drawing.Point(302, 43);
             this.cbeCheckOutType.Name = "cbeCheckOutType";
             this.cbeCheckOutType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeCheckOutType.Properties.NullText = "请选择结账类型";
             this.cbeCheckOutType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbeCheckOutType.Size = new System.Drawing.Size(112, 20);
+            this.cbeCheckOutType.Size = new System.Drawing.Size(141, 20);
             this.cbeCheckOutType.StyleController = this.layoutControl1;
             this.cbeCheckOutType.TabIndex = 18;
             // 
@@ -508,7 +523,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem12});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 67);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(824, 245);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(824, 254);
             this.layoutControlGroup3.Text = "添加套餐";
             // 
             // layoutControlItem2
@@ -549,12 +564,26 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(186, 22);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(800, 143);
+            this.layoutControlItem1.Size = new System.Drawing.Size(800, 152);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.Text = " ";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(4, 14);
             this.layoutControlItem1.TextToControlDistance = 5;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.pageNavigator;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 176);
+            this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 35);
+            this.layoutControlItem12.MinSize = new System.Drawing.Size(99, 35);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(800, 35);
+            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem12.Text = " ";
+            this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(4, 14);
+            this.layoutControlItem12.TextToControlDistance = 5;
             // 
             // layoutControlGroup2
             // 
@@ -562,9 +591,9 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4,
             this.layoutControlItem5});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 312);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 321);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(824, 368);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(824, 359);
             this.layoutControlGroup2.Text = "账单明细";
             // 
             // layoutControlItem4
@@ -572,7 +601,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem4.Control = this.gridProductDetail;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(800, 297);
+            this.layoutControlItem4.Size = new System.Drawing.Size(800, 288);
             this.layoutControlItem4.Text = " ";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(4, 14);
@@ -581,14 +610,14 @@ namespace WMS.UserControls.InOutStockManager
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.panelControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 297);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 288);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(0, 28);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(10, 28);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(800, 28);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = " ";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(171, 14);
             // 
             // layoutControlGroup4
             // 
@@ -597,8 +626,10 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7,
             this.simpleLabelItem2,
+            this.layoutControlItem6,
             this.sliMemberCanUseInfo,
-            this.layoutControlItem6});
+            this.emptySpaceItem1,
+            this.simpleLabelItem3});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Size = new System.Drawing.Size(824, 67);
@@ -610,10 +641,10 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem7.CustomizationFormText = "会员手机：";
             this.layoutControlItem7.FillControlToClientArea = false;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem7.MaxSize = new System.Drawing.Size(0, 22);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(81, 22);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(250, 22);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(202, 22);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(209, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(202, 24);
             this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem7.Text = "会员手机：";
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -625,8 +656,8 @@ namespace WMS.UserControls.InOutStockManager
             this.simpleLabelItem2.AllowHotTrack = false;
             this.simpleLabelItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Red;
             this.simpleLabelItem2.AppearanceItemCaption.Options.UseForeColor = true;
-            this.simpleLabelItem2.Location = new System.Drawing.Point(209, 0);
-            this.simpleLabelItem2.MaxSize = new System.Drawing.Size(0, 18);
+            this.simpleLabelItem2.Location = new System.Drawing.Point(202, 0);
+            this.simpleLabelItem2.MaxSize = new System.Drawing.Size(11, 18);
             this.simpleLabelItem2.MinSize = new System.Drawing.Size(11, 18);
             this.simpleLabelItem2.Name = "simpleLabelItem2";
             this.simpleLabelItem2.OptionsPrint.AppearanceItemCaption.ForeColor = System.Drawing.Color.Red;
@@ -637,49 +668,49 @@ namespace WMS.UserControls.InOutStockManager
             this.simpleLabelItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(7, 14);
             // 
-            // sliMemberCanUseInfo
-            // 
-            this.sliMemberCanUseInfo.AllowHotTrack = false;
-            this.sliMemberCanUseInfo.CustomizationFormText = " ";
-            this.sliMemberCanUseInfo.Location = new System.Drawing.Point(399, 0);
-            this.sliMemberCanUseInfo.Name = "sliMemberCanUseInfo";
-            this.sliMemberCanUseInfo.Size = new System.Drawing.Size(401, 24);
-            this.sliMemberCanUseInfo.Text = " ";
-            this.sliMemberCanUseInfo.TextSize = new System.Drawing.Size(60, 14);
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cbeCheckOutType;
-            this.layoutControlItem6.Location = new System.Drawing.Point(220, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(213, 0);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(210, 24);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(179, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(179, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(210, 24);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.Text = "结账类型：";
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem6.TextToControlDistance = 5;
+            this.layoutControlItem6.TrimClientAreaToControl = false;
             // 
-            // layoutControlItem12
+            // sliMemberCanUseInfo
             // 
-            this.layoutControlItem12.Control = this.pageNavigator;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 167);
-            this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 35);
-            this.layoutControlItem12.MinSize = new System.Drawing.Size(99, 35);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(800, 35);
-            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem12.Text = " ";
-            this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(4, 14);
-            this.layoutControlItem12.TextToControlDistance = 5;
+            this.sliMemberCanUseInfo.AllowHotTrack = false;
+            this.sliMemberCanUseInfo.Location = new System.Drawing.Point(436, 0);
+            this.sliMemberCanUseInfo.Name = "sliMemberCanUseInfo";
+            this.sliMemberCanUseInfo.Size = new System.Drawing.Size(354, 24);
+            this.sliMemberCanUseInfo.Text = "可用余额3000，可用积分20000";
+            this.sliMemberCanUseInfo.TextSize = new System.Drawing.Size(171, 14);
             // 
-            // pageNavigator
+            // emptySpaceItem1
             // 
-            this.pageNavigator.Location = new System.Drawing.Point(33, 277);
-            this.pageNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pageNavigator.Name = "pageNavigator";
-            this.pageNavigator.Size = new System.Drawing.Size(787, 31);
-            this.pageNavigator.Skip = 0;
-            this.pageNavigator.TabIndex = 15;
-            this.pageNavigator.Total = 0;
-            this.pageNavigator.PageIndexChanged += new System.Action<int, int>(this.pageNavigator1_PageIndexChanged);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(790, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 24);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // simpleLabelItem3
+            // 
+            this.simpleLabelItem3.AllowHotTrack = false;
+            this.simpleLabelItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Red;
+            this.simpleLabelItem3.AppearanceItemCaption.Options.UseForeColor = true;
+            this.simpleLabelItem3.Location = new System.Drawing.Point(423, 0);
+            this.simpleLabelItem3.Name = "simpleLabelItem3";
+            this.simpleLabelItem3.Size = new System.Drawing.Size(13, 24);
+            this.simpleLabelItem3.Text = "*";
+            this.simpleLabelItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.simpleLabelItem3.TextSize = new System.Drawing.Size(7, 14);
             // 
             // CheckOutManager
             // 
@@ -709,15 +740,17 @@ namespace WMS.UserControls.InOutStockManager
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliMemberCanUseInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliMemberCanUseInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -760,10 +793,12 @@ namespace WMS.UserControls.InOutStockManager
         private DevExpress.XtraEditors.TextEdit tePhoneNumber;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private DevExpress.XtraLayout.SimpleLabelItem sliMemberCanUseInfo;
         private DevExpress.XtraEditors.ComboBoxEdit cbeCheckOutType;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private PageNavigator pageNavigator;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.SimpleLabelItem sliMemberCanUseInfo;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem3;
     }
 }

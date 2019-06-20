@@ -93,14 +93,16 @@ namespace CRM.Dal.CheckOutManager
             }
         }
 
+        
         public int TransactionScopeTest()
         {
             try
             {
-                //垮裤事务：TransactionScope事务,引用程序集：System.Transactions;
-
-
+                //垮裤事务：TransactionScope事务,引用程序集：System.Transactions;不支持分布式。
                 //服务器 'DELL-PC' 上的 MSDTC 不可用: 在windows控制面版-->管理工具-->服务-->Distributed Transaction Coordinator-->属性-->启动
+
+
+                //分布式事务：RedLock
                 using (TransactionScope scope = new TransactionScope())
                 {
                     using (WMSDbContext dbContext = new WMSDbContext())

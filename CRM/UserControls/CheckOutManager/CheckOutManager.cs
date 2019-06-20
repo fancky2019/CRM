@@ -89,6 +89,7 @@ namespace WMS.UserControls.InOutStockManager
                     return;
                 }
             }
+            this.sliMemberCanUseInfo.Text = $"可用余额{_memberAmountVM.TotalAmount}元，可用积分{_memberAmountVM.TotalBonusPoints}。";
             this.pageNavigator.Skip = 0;
             InitData();
         }
@@ -184,9 +185,24 @@ namespace WMS.UserControls.InOutStockManager
 
             };
 
-
-
-          
+            if (eckOutOrderVM.Type == 0)
+            {
+                var payAmount = eckOutOrderVM.Products.Sum(p => p.RealityPrice);
+                if(_memberAmountVM.TotalAmount< payAmount)
+                {
+                    XtraMessageBox.Show($"余额不足，请充值！", "提示", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            else
+            {
+                var payBonusPoints = eckOutOrderVM.Products.Sum(p => p.BonusPoints);
+                if (_memberAmountVM.TotalBonusPoints < payBonusPoints)
+                {
+                    XtraMessageBox.Show($"积分不足，请用现金付账！", "提示", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             //InOutStockVM inOutStockVM = this.Tag as InOutStockVM;
             //InOutStock inOutStock = null;
             //int result = 0;
@@ -217,6 +233,7 @@ namespace WMS.UserControls.InOutStockManager
             if (result > 0)
             {
                 XtraMessageBox.Show($"结账成功！", "提示", MessageBoxButtons.OK);
+                this.tePhoneNumber.Text = "";
             }
             else
             {
@@ -339,7 +356,6 @@ namespace WMS.UserControls.InOutStockManager
             this.gridProductDetail.DataSource = null;
             this.gridProductDetail.DataSource = _selectedProduct;
         }
-
 
     }
 }
