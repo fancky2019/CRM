@@ -26,7 +26,7 @@ namespace CRM.BLL.CheckOutManager
             return _memberAmountDal.GetMemberAmountByPhoneNumber(phoneNumber);
         }
 
-        public int CheckOut(CheckOutOrderVM checkOutOrderVM)
+        public int CheckOut(CheckOutOrderVM checkOutOrderVM, MemberAmountVM memberAmountVM)
         {
             try
             {
@@ -53,7 +53,18 @@ namespace CRM.BLL.CheckOutManager
                     });
                 });
 
-                return _checkOutManagerDal.CheckOut(checkOutOrder, checkOutOrderDetailList);
+                if (checkOutOrderVM.Type == 0)
+                {
+                    var payAmount = checkOutOrderVM.Products.Sum(p => p.RealityPrice);
+                    memberAmountVM.TotalAmount -= payAmount;
+                    memberAmountVM.TotalBonusPoints += payAmount;
+                }
+                else
+                {
+                    var payBonusPoints = checkOutOrderVM.Products.Sum(p => p.BonusPoints);
+                    memberAmountVM.TotalBonusPoints -= payBonusPoints;
+                }
+                return _checkOutManagerDal.CheckOut(checkOutOrder, checkOutOrderDetailList, memberAmountVM);
                 //    return _checkOutManagerDal.CheckOutByTransactionScope(checkOutOrder, checkOutOrderDetailList);
                 //  return _checkOutManagerDal.TransactionScopeTest();
 

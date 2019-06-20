@@ -174,7 +174,7 @@ namespace WMS.UserControls.InOutStockManager
                 return;
             }
 
-            CheckOutOrderVM eckOutOrderVM = new CheckOutOrderVM
+            CheckOutOrderVM checkOutOrderVM = new CheckOutOrderVM
             {
                 Type = _checkOutTypeSystemCodeList.First(p => p.DisplayName == this.cbeCheckOutType.Text).CodeValue,
                 Products = _selectedProduct,
@@ -185,9 +185,9 @@ namespace WMS.UserControls.InOutStockManager
 
             };
 
-            if (eckOutOrderVM.Type == 0)
+            if (checkOutOrderVM.Type == 0)
             {
-                var payAmount = eckOutOrderVM.Products.Sum(p => p.RealityPrice);
+                var payAmount = checkOutOrderVM.Products.Sum(p => p.RealityPrice);
                 if(_memberAmountVM.TotalAmount< payAmount)
                 {
                     XtraMessageBox.Show($"余额不足，请充值！", "提示", MessageBoxButtons.OK);
@@ -196,7 +196,7 @@ namespace WMS.UserControls.InOutStockManager
             }
             else
             {
-                var payBonusPoints = eckOutOrderVM.Products.Sum(p => p.BonusPoints);
+                var payBonusPoints = checkOutOrderVM.Products.Sum(p => p.BonusPoints);
                 if (_memberAmountVM.TotalBonusPoints < payBonusPoints)
                 {
                     XtraMessageBox.Show($"积分不足，请用现金付账！", "提示", MessageBoxButtons.OK);
@@ -229,16 +229,27 @@ namespace WMS.UserControls.InOutStockManager
             //    });
             //    result = _inOutStockManagerBll.UpdateInOutStockAndDetail(inOutStock, inOutStockDetailList);   
             //}
-            var result = _checkOutManagerBll.CheckOut(eckOutOrderVM);
+            var result = _checkOutManagerBll.CheckOut(checkOutOrderVM, _memberAmountVM);
             if (result > 0)
             {
                 XtraMessageBox.Show($"结账成功！", "提示", MessageBoxButtons.OK);
-                this.tePhoneNumber.Text = "";
+                ClearUI();
             }
             else
             {
                 XtraMessageBox.Show($"结账失败！", "提示", MessageBoxButtons.OK);
             }
+        }
+
+
+        private void ClearUI()
+        {
+            this.tePhoneNumber.Text = "";
+            //为" "不能为""，否则会显示默认控件name值
+            this.sliMemberCanUseInfo.Text = " ";
+            _selectedProduct.Clear();
+            this.gridProductSource.DataSource = null;
+            this.gridProductDetail.DataSource = null;
         }
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
