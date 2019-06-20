@@ -16,7 +16,7 @@ namespace CRM.Dal.CheckOutManager
     public class CheckOutManagerDal
     {
 
-        public int CheckOut(CheckOutOrder checkOutOrder, List<CheckOutOrderDetail> checkOutOrderDetailList)
+        public int CheckOut(CheckOutOrder checkOutOrder, List<CheckOutOrderDetail> checkOutOrderDetailList, MemberAmountVM memberAmountVM)
         {
             try
             {
@@ -29,11 +29,18 @@ namespace CRM.Dal.CheckOutManager
                         {
                             dbContext.CheckOutOrder.Add(checkOutOrder);
                             dbContext.SaveChanges();
+
                             checkOutOrderDetailList.ForEach(p =>
                             {
                                 p.CheckOutOrderID = checkOutOrder.ID;
                             });
                             dbContext.CheckOutOrderDetail.AddRange(checkOutOrderDetailList);
+
+                            MemberAmount memberAmount =dbContext.MemberAmount.First(p => p.MemberID == checkOutOrder.MemberID);
+                            memberAmount.TotalAmount = memberAmountVM.TotalAmount;
+                            memberAmount.TotalBonusPoints = memberAmountVM.TotalBonusPoints;
+                            memberAmount.ModifyTime = DateTime.Now;
+
                             dbContext.SaveChanges();
                             dbContextTransaction.Commit();
                             return 1;

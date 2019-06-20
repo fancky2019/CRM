@@ -30,11 +30,11 @@ namespace WMS.UserControls.InOutStockManager
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.sbtnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -134,16 +134,16 @@ namespace WMS.UserControls.InOutStockManager
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.sbtnSave);
-            this.panelControl1.Location = new System.Drawing.Point(198, 652);
+            this.panelControl1.Location = new System.Drawing.Point(31, 652);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(622, 24);
+            this.panelControl1.Size = new System.Drawing.Size(789, 24);
             this.panelControl1.TabIndex = 16;
             // 
             // sbtnSave
             // 
             this.sbtnSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sbtnSave.Location = new System.Drawing.Point(546, 2);
+            this.sbtnSave.Location = new System.Drawing.Point(713, 2);
             this.sbtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.sbtnSave.Name = "sbtnSave";
             this.sbtnSave.Size = new System.Drawing.Size(74, 20);
@@ -324,7 +324,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             this.ribeDelete.AutoHeight = false;
             this.ribeDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ribeDelete.Name = "ribeDelete";
             this.ribeDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ribeDelete.Click += new System.EventHandler(this.ribeDelete_Click);
@@ -617,7 +617,7 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem5.Size = new System.Drawing.Size(800, 28);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = " ";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(171, 14);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(4, 14);
             // 
             // layoutControlGroup4
             // 
@@ -689,8 +689,8 @@ namespace WMS.UserControls.InOutStockManager
             this.sliMemberCanUseInfo.Location = new System.Drawing.Point(436, 0);
             this.sliMemberCanUseInfo.Name = "sliMemberCanUseInfo";
             this.sliMemberCanUseInfo.Size = new System.Drawing.Size(354, 24);
-            this.sliMemberCanUseInfo.Text = "可用余额3000，可用积分20000";
-            this.sliMemberCanUseInfo.TextSize = new System.Drawing.Size(171, 14);
+            this.sliMemberCanUseInfo.Text = " ";
+            this.sliMemberCanUseInfo.TextSize = new System.Drawing.Size(4, 14);
             // 
             // emptySpaceItem1
             // 
