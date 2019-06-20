@@ -1,5 +1,6 @@
 ﻿using CRM.BLL.CheckOutManager;
 using CRM.BLL.ProductManager;
+using CRM.BLL.SystemManager;
 using CRM.Common;
 using CRM.Model.EntityModels;
 using CRM.Model.QueryModels;
@@ -22,28 +23,36 @@ namespace WMS.UserControls.InOutStockManager
         //   InOutStockManagerBll _inOutStockManagerBll = null;
         List<ProductVM> _selectedProduct = null;
 
+        SystemCodeBll _systemCodeBll = null;
         MemberManagerBll _memberManagerBll = null;
         CheckOutManagerBll _checkOutManagerBll = null;
 
         MemberAmountVM _memberAmountVM = null;
+
+        List<SystemCode> _checkOutTypeSystemCodeList = null;
         public CheckOutManager()
         {
             InitializeComponent();
+            _systemCodeBll = new SystemCodeBll();
             _productManagerBll = new ProductManagerBll();
+
             // _inOutStockManagerBll = new InOutStockManagerBll();
             _selectedProduct = new List<ProductVM>();
 
-            CheckOutManagerBll _checkOutManagerBll = null;
+
             _checkOutManagerBll = new CheckOutManagerBll();
             _memberManagerBll = new MemberManagerBll();
 
         }
-        private void InOutStockEdit_Load(object sender, EventArgs e)
+        private void CheckOutManager_Load(object sender, EventArgs e)
         {
             LoadData();
         }
         private void LoadData()
         {
+            _checkOutTypeSystemCodeList = _systemCodeBll.GetSystemCode("CheckOutType");
+            this.cbeCheckOutType.Properties.Items.AddRange(_checkOutTypeSystemCodeList.Select(p => p.DisplayName).ToList());
+            //  lueCheckOutType.Properties.PopulateColumns();
             //InOutStockVM inOutStockVM = this.Tag as InOutStockVM;
             //if (inOutStockVM != null)
             //{
@@ -54,7 +63,7 @@ namespace WMS.UserControls.InOutStockManager
         }
         private void sbtnQuery_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(this.tePhoneNumber.Text.Trim()))
+            if (string.IsNullOrEmpty(this.tePhoneNumber.Text.Trim()))
             {
                 XtraMessageBox.Show($"请先填写会员手机号！", "提示", MessageBoxButtons.OK);
                 return;
@@ -69,10 +78,10 @@ namespace WMS.UserControls.InOutStockManager
                 }
             }
 
-            if (_memberAmountVM==null)
+            if (_memberAmountVM == null)
             {
                 _memberAmountVM = _checkOutManagerBll.GetMemberAmountByPhoneNumber(this.tePhoneNumber.Text.Trim());
-                if(_memberAmountVM==null)
+                if (_memberAmountVM == null)
                 {
                     XtraMessageBox.Show($"您的余额为零请充值！", "提示", MessageBoxButtons.OK);
                     return;
@@ -151,11 +160,11 @@ namespace WMS.UserControls.InOutStockManager
         private void sbtnSave_Click(object sender, EventArgs e)
         {
             ////int[] rowHandles = this.gridViewProductSource.GetSelectedRows();//获取选中行号；
-            //if (_selectedProduct.Count == 0)
-            //{
-            //    XtraMessageBox.Show($"产品明细里没有产品，请添加产品！", "提示", MessageBoxButtons.OK);
-            //    return;
-            //}
+            if (_selectedProduct.Count == 0)
+            {
+                XtraMessageBox.Show($"套餐明细里没有产品，请添加套餐！", "提示", MessageBoxButtons.OK);
+                return;
+            }
             //List<InOutStockDetail> inOutStockDetailList = new List<InOutStockDetail>();//添加的产品
             //_selectedProduct.ForEach(p =>
             //{
@@ -302,13 +311,7 @@ namespace WMS.UserControls.InOutStockManager
         }
         #endregion
 
-        private void cmeInOut_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (this.cmeInOut.SelectedItem != null)
-            {
-                this.sbtnQuery.Enabled = true;
-            }
-        }
+
 
         private void ribeDelete_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -41,10 +42,19 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "开发中。。。";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(95, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 22);
+            this.comboBox1.TabIndex = 1;
+            // 
             // Developing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelControl1);
             this.Name = "Developing";
             this.ResumeLayout(false);
@@ -55,5 +65,6 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

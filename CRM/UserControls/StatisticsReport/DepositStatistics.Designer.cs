@@ -33,15 +33,15 @@
             this.tePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             this.gridProduct = new DevExpress.XtraGrid.GridControl();
             this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
@@ -97,6 +97,16 @@
             this.panelControl2.Size = new System.Drawing.Size(950, 371);
             this.panelControl2.TabIndex = 6;
             // 
+            // pageNavigator1
+            // 
+            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pageNavigator1.Location = new System.Drawing.Point(2, 339);
+            this.pageNavigator1.Name = "pageNavigator1";
+            this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
+            this.pageNavigator1.Skip = 0;
+            this.pageNavigator1.TabIndex = 5;
+            this.pageNavigator1.Total = 0;
+            // 
             // gridProduct
             // 
             this.gridProduct.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,8 +129,8 @@
             this.gridProduct.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.gridProduct.MainView = this.gridViewProduct;
             this.gridProduct.Name = "gridProduct";
-            this.gridProduct.Size = new System.Drawing.Size(946, 319);
-            this.gridProduct.TabIndex = 4;
+            this.gridProduct.Size = new System.Drawing.Size(946, 337);
+            this.gridProduct.TabIndex = 6;
             this.gridProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProduct});
             // 
@@ -139,8 +149,6 @@
             this.gridViewProduct.Name = "gridViewProduct";
             this.gridViewProduct.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProduct.OptionsView.ShowGroupPanel = false;
-            this.gridViewProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridViewProduct_CustomDrawRowIndicator);
-            this.gridViewProduct.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.gridViewProduct_CustomDrawEmptyForeground);
             // 
             // gridColumn7
             // 
@@ -174,6 +182,21 @@
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 135;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "充值金额";
+            this.gridColumn2.FieldName = "DepositAmount";
+            this.gridColumn2.MinWidth = 23;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.AllowFocus = false;
+            this.gridColumn2.OptionsColumn.AllowMove = false;
+            this.gridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 87;
+            // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
@@ -194,21 +217,6 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
             this.gridColumn4.Width = 135;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "充值金额";
-            this.gridColumn2.FieldName = "DepositAmount";
-            this.gridColumn2.MinWidth = 23;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowEdit = false;
-            this.gridColumn2.OptionsColumn.AllowFocus = false;
-            this.gridColumn2.OptionsColumn.AllowMove = false;
-            this.gridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.gridColumn2.OptionsFilter.AllowFilter = false;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 87;
             // 
             // gridColumn9
             // 
@@ -250,20 +258,8 @@
             this.gridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 156;
-            // 
-            // pageNavigator1
-            // 
-            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pageNavigator1.Location = new System.Drawing.Point(2, 321);
-            this.pageNavigator1.Margin = new System.Windows.Forms.Padding(5);
-            this.pageNavigator1.Name = "pageNavigator1";
-            this.pageNavigator1.Size = new System.Drawing.Size(946, 48);
-            this.pageNavigator1.Skip = 0;
-            this.pageNavigator1.TabIndex = 0;
-            this.pageNavigator1.Total = 0;
-            this.pageNavigator1.PageIndexChanged += new System.Action<int, int>(this.pageNavigator1_PageIndexChanged);
             // 
             // DepositStatistics
             // 
@@ -296,10 +292,10 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewProduct;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private PageNavigator pageNavigator1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

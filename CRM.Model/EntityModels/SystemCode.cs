@@ -21,6 +21,10 @@ namespace CRM.Model.EntityModels
         /// <summary>
         /// 
         /// </summary>
+        public string DisplayName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Description { get; set; }
     }
 }
