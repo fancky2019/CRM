@@ -53,7 +53,7 @@ namespace CRM
             //    }
             //}
 
-
+  
             //Application.Run(new FrmLgoin());
             Application.Run(new FrmMain());
 
@@ -74,8 +74,8 @@ namespace CRM
         private static void DevInit()
         {
             //汉化，在debug下建zh-Hans文件夹，将汉化文件(dll)拷贝进去
-            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("zh-CN");
-
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-Hans");
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("zh-Hans");
             //DevExpress.BonusSkins.Dll
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Skins.SkinManager.EnableFormSkins();

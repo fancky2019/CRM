@@ -25,5 +25,18 @@ namespace CRM.BLL.StatisticsReport
         {
             return _dal.MemberAmountStatistic(qm);
         }
+
+        public (int Count, List<CheckOutOrderVM> ListCheckOutOrderVM) CheckOutOrderStatistic(CheckOutOrderQM qm)
+        {
+
+            return _dal.CheckOutOrderStatistic(qm);
+
+        }
+
+
+        public List<CheckOutOrderDetailVM> GetCheckOutOrderDetail(CheckOutOrderDetailQM qm)
+        {
+            return _dal.GetCheckOutOrderDetail(qm);
+        }
     }
 }
