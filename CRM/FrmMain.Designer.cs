@@ -191,6 +191,7 @@
             this.barButtonItem11.Id = 15;
             this.barButtonItem11.Name = "barButtonItem11";
             this.barButtonItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem11.Tag = "Developing";
             // 
             // barButtonItem12
             // 
@@ -198,6 +199,7 @@
             this.barButtonItem12.Id = 16;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem12.Tag = "Developing";
             // 
             // barButtonItem13
             // 
@@ -205,6 +207,7 @@
             this.barButtonItem13.Id = 17;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem13.Tag = "Developing";
             // 
             // ribbonPage6
             // 
