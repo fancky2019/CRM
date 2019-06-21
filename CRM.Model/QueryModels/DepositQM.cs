@@ -12,6 +12,6 @@ namespace CRM.Model.QueryModels
         /// 
         /// </summary>
         public string PhoneNumber { get; set; }
-
+        public string UserName { get; set; }
     }
 }

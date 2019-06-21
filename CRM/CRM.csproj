@@ -167,11 +167,11 @@
     <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.Designer.cs">
       <DependentUpon>CheckOutStatistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.cs">
+    <Compile Include="UserControls\StatisticsReport\MemberAmountStatistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.Designer.cs">
-      <DependentUpon>BonusPointsExchangeStatistics.cs</DependentUpon>
+    <Compile Include="UserControls\StatisticsReport\MemberAmountStatistic.Designer.cs">
+      <DependentUpon>MemberAmountStatistic.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StatisticsReport\DepositStatistics.cs">
       <SubType>UserControl</SubType>
@@ -247,8 +247,8 @@
     <EmbeddedResource Include="UserControls\StatisticsReport\CheckOutStatistics.resx">
       <DependentUpon>CheckOutStatistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\StatisticsReport\BonusPointsExchangeStatistics.resx">
-      <DependentUpon>BonusPointsExchangeStatistics.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\StatisticsReport\MemberAmountStatistic.resx">
+      <DependentUpon>MemberAmountStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StatisticsReport\DepositStatistics.resx">
       <DependentUpon>DepositStatistics.cs</DependentUpon>

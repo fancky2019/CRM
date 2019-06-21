@@ -13,11 +13,11 @@ namespace CRM.UserControls.ProcuctManager
 {
     public partial class DepositStatistics : XtraUserControl
     {
-        DepositStatisticsBll _bll = null;
+        StatisticsReportBll _bll = null;
         public DepositStatistics()
         {
             InitializeComponent();
-            _bll = new DepositStatisticsBll();
+            _bll = new StatisticsReportBll();
             InitData(this.pageNavigator1.Skip, this.pageNavigator1.Take);
         }
 
@@ -35,13 +35,13 @@ namespace CRM.UserControls.ProcuctManager
       
         private void InitData(int skip,int take)
         {
-           var result = _bll.LoadData(new DepositQM()
+           var result = _bll.DepositStatistics(new DepositQM()
             {
                 Skip = skip,
                 Take = take
             });
             this.pageNavigator1.Total = result.Count;
-            this.gridProduct.DataSource = result.ListProductVM;
+            this.gridProduct.DataSource = result.ListDepositVM;
         }
 
         private void pageNavigator1_PageIndexChanged(int take, int skip)
@@ -60,8 +60,9 @@ namespace CRM.UserControls.ProcuctManager
             qm.Skip = 0;
             qm.Take = this.pageNavigator1.Take;
             qm.PhoneNumber = this.tePhoneNumber.Text.Trim();
+            qm.UserName = this.teUserName.Text.Trim();
 
-            var result = _bll.LoadData(qm);
+            var result = _bll.DepositStatistics(qm);
             this.gridProduct.DataSource = null;
             this.pageNavigator1.Total = result.Item1;
             this.gridProduct.DataSource = result.Item2;

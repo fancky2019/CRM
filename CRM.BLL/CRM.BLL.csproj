@@ -46,7 +46,7 @@
     <Compile Include="MemberManager\MemberManagerBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductManager\ProductManagerBll.cs" />
-    <Compile Include="StatisticsReport\DepositStatisticsBll.cs" />
+    <Compile Include="StatisticsReport\StatisticsReportBll.cs" />
     <Compile Include="SystemManager\SystemCodeBll.cs" />
     <Compile Include="SystemManager\UserBll.cs" />
   </ItemGroup>

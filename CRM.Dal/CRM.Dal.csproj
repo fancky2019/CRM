@@ -64,7 +64,7 @@
     <Compile Include="ProductManager\ProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="StatisticsReport\DepositStatisticsDal.cs" />
+    <Compile Include="StatisticsReport\StatisticsReportDal.cs" />
     <Compile Include="SystemManager\SystemCodeDal.cs" />
     <Compile Include="SystemManager\UserDal.cs" />
     <Compile Include="CRMDbContext.cs" />

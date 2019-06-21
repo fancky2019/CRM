@@ -29,21 +29,25 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.teUserName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.sbtnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.tePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             this.gridProduct = new DevExpress.XtraGrid.GridControl();
             this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -53,6 +57,8 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.teUserName);
+            this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.sbtnQuery);
             this.panelControl1.Controls.Add(this.tePhoneNumber);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -61,6 +67,21 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(950, 81);
             this.panelControl1.TabIndex = 5;
+            // 
+            // teUserName
+            // 
+            this.teUserName.Location = new System.Drawing.Point(369, 36);
+            this.teUserName.Name = "teUserName";
+            this.teUserName.Size = new System.Drawing.Size(173, 20);
+            this.teUserName.TabIndex = 6;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(303, 39);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(60, 14);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "会员名称：";
             // 
             // sbtnQuery
             // 
@@ -74,18 +95,18 @@
             // 
             // tePhoneNumber
             // 
-            this.tePhoneNumber.Location = new System.Drawing.Point(73, 37);
+            this.tePhoneNumber.Location = new System.Drawing.Point(101, 36);
             this.tePhoneNumber.Name = "tePhoneNumber";
             this.tePhoneNumber.Size = new System.Drawing.Size(173, 20);
             this.tePhoneNumber.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(35, 41);
+            this.labelControl1.Location = new System.Drawing.Point(35, 39);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 14);
+            this.labelControl1.Size = new System.Drawing.Size(60, 14);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "名称：";
+            this.labelControl1.Text = "会员手机：";
             // 
             // panelControl2
             // 
@@ -96,16 +117,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(950, 371);
             this.panelControl2.TabIndex = 6;
-            // 
-            // pageNavigator1
-            // 
-            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pageNavigator1.Location = new System.Drawing.Point(2, 339);
-            this.pageNavigator1.Name = "pageNavigator1";
-            this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
-            this.pageNavigator1.Skip = 0;
-            this.pageNavigator1.TabIndex = 5;
-            this.pageNavigator1.Total = 0;
             // 
             // gridProduct
             // 
@@ -137,6 +148,7 @@
             // gridViewProduct
             // 
             this.gridViewProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn3,
             this.gridColumn7,
             this.gridColumn1,
             this.gridColumn2,
@@ -149,6 +161,26 @@
             this.gridViewProduct.Name = "gridViewProduct";
             this.gridViewProduct.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProduct.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.Caption = "名称";
+            this.gridColumn3.FieldName = "UserName";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsColumn.AllowMove = false;
+            this.gridColumn3.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 117;
             // 
             // gridColumn7
             // 
@@ -179,8 +211,8 @@
             this.gridColumn1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 135;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 148;
             // 
             // gridColumn2
             // 
@@ -194,8 +226,8 @@
             this.gridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 87;
+            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 115;
             // 
             // gridColumn4
             // 
@@ -215,8 +247,8 @@
             this.gridColumn4.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 135;
+            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumn4.Width = 148;
             // 
             // gridColumn9
             // 
@@ -237,8 +269,8 @@
             this.gridColumn9.OptionsColumn.AllowMove = false;
             this.gridColumn9.OptionsFilter.AllowFilter = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 3;
-            this.gridColumn9.Width = 211;
+            this.gridColumn9.VisibleIndex = 4;
+            this.gridColumn9.Width = 190;
             // 
             // gridColumn5
             // 
@@ -258,8 +290,18 @@
             this.gridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 156;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 197;
+            // 
+            // pageNavigator1
+            // 
+            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pageNavigator1.Location = new System.Drawing.Point(2, 339);
+            this.pageNavigator1.Name = "pageNavigator1";
+            this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
+            this.pageNavigator1.Skip = 0;
+            this.pageNavigator1.TabIndex = 5;
+            this.pageNavigator1.Total = 0;
             // 
             // DepositStatistics
             // 
@@ -272,6 +314,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -297,5 +340,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private PageNavigator pageNavigator1;
+        private DevExpress.XtraEditors.TextEdit teUserName;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }
