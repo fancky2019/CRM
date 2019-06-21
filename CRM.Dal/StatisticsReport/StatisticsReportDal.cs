@@ -67,7 +67,7 @@ namespace CRM.Dal.StatisticsReport
                                      MemberID = p.MemberID,
                                      UserName = k.UserName,
                                      PhoneNumber = k.PhoneNumber,
-                                     TotalAmount = p.TotalBonusPoints,
+                                     TotalAmount = p.TotalAmount,
                                      TotalBonusPoints = p.TotalBonusPoints,
                                      CreateTime = p.CreateTime,
                                      ModifyTime = p.ModifyTime

@@ -368,5 +368,40 @@ namespace WMS.UserControls.InOutStockManager
             this.gridProductDetail.DataSource = _selectedProduct;
         }
 
+        private void GridViewProductSource_CustomDrawEmptyForeground(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
+        {
+            if (this.gridViewProductSource.RowCount == 0)
+            {
+                Font f = new Font("宋体", 12, FontStyle.Bold);
+                Rectangle r = new Rectangle(gridViewProductSource.GridControl.Width / 2 - 100, e.Bounds.Top + 5, e.Bounds.Right - 5, e.Bounds.Height - 5);
+                e.Graphics.DrawString("没有查询到数据!", f, Brushes.Red, r);
+            }
+        }
+
+        private void GridViewProductSource_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle > -1)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
+
+        private void GridViewProductDetail_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle > -1)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
+
+        private void GridViewProductDetail_CustomDrawEmptyForeground(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
+        {
+            if (this.gridViewProductDetail.RowCount == 0)
+            {
+                Font f = new Font("宋体", 12, FontStyle.Bold);
+                Rectangle r = new Rectangle(gridViewProductDetail.GridControl.Width / 2 - 100, e.Bounds.Top + 5, e.Bounds.Right - 5, e.Bounds.Height - 5);
+                e.Graphics.DrawString("没有查询到数据!", f, Brushes.Red, r);
+            }
+        }
     }
 }

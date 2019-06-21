@@ -189,9 +189,12 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn8});
             this.gridViewProductDetail.DetailHeight = 327;
             this.gridViewProductDetail.GridControl = this.gridProductDetail;
+            this.gridViewProductDetail.IndicatorWidth = 29;
             this.gridViewProductDetail.Name = "gridViewProductDetail";
             this.gridViewProductDetail.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProductDetail.OptionsView.ShowGroupPanel = false;
+            this.gridViewProductDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GridViewProductDetail_CustomDrawRowIndicator);
+            this.gridViewProductDetail.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.GridViewProductDetail_CustomDrawEmptyForeground);
             this.gridViewProductDetail.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridViewProductDetail_InvalidRowException);
             this.gridViewProductDetail.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewProductDetail_ValidateRow);
             // 
@@ -365,13 +368,16 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn10});
             this.gridViewProductSource.DetailHeight = 327;
             this.gridViewProductSource.GridControl = this.gridProductSource;
+            this.gridViewProductSource.IndicatorWidth = 29;
             this.gridViewProductSource.Name = "gridViewProductSource";
             this.gridViewProductSource.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProductSource.OptionsSelection.CheckBoxSelectorColumnWidth = 22;
             this.gridViewProductSource.OptionsSelection.MultiSelect = true;
             this.gridViewProductSource.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridViewProductSource.OptionsView.ShowGroupPanel = false;
+            this.gridViewProductSource.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GridViewProductSource_CustomDrawRowIndicator);
             this.gridViewProductSource.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridViewProductSource_SelectionChanged);
+            this.gridViewProductSource.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.GridViewProductSource_CustomDrawEmptyForeground);
             this.gridViewProductSource.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProductSource_MouseDown);
             // 
             // gridColumn1

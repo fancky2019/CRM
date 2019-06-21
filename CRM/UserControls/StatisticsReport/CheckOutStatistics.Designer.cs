@@ -136,9 +136,12 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn8});
             this.gvCheckOutOrderDetail.DetailHeight = 327;
             this.gvCheckOutOrderDetail.GridControl = this.gcCheckOutOrderDetail;
+            this.gvCheckOutOrderDetail.IndicatorWidth = 29;
             this.gvCheckOutOrderDetail.Name = "gvCheckOutOrderDetail";
             this.gvCheckOutOrderDetail.OptionsMenu.EnableColumnMenu = false;
             this.gvCheckOutOrderDetail.OptionsView.ShowGroupPanel = false;
+            this.gvCheckOutOrderDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvCheckOutOrderDetail_CustomDrawRowIndicator);
+            this.gvCheckOutOrderDetail.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.GvCheckOutOrderDetail_CustomDrawEmptyForeground);
             // 
             // gcProductName
             // 
@@ -309,6 +312,7 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn10});
             this.gvCheckOutOrder.DetailHeight = 327;
             this.gvCheckOutOrder.GridControl = this.gcCheckOutOrder;
+            this.gvCheckOutOrder.IndicatorWidth = 29;
             this.gvCheckOutOrder.Name = "gvCheckOutOrder";
             this.gvCheckOutOrder.OptionsDetail.EnableMasterViewMode = false;
             this.gvCheckOutOrder.OptionsMenu.EnableColumnMenu = false;
@@ -317,7 +321,9 @@ namespace WMS.UserControls.InOutStockManager
             this.gvCheckOutOrder.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gvCheckOutOrder.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.gvCheckOutOrder.OptionsView.ShowGroupPanel = false;
+            this.gvCheckOutOrder.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvCheckOutOrder_CustomDrawRowIndicator);
             this.gvCheckOutOrder.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.GvCheckOutOrder_SelectionChanged);
+            this.gvCheckOutOrder.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.GvCheckOutOrder_CustomDrawEmptyForeground);
             this.gvCheckOutOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvCheckOutOrder_MouseDown);
             // 
             // gridColumn1

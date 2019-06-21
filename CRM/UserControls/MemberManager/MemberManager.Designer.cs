@@ -39,15 +39,6 @@
             this.teUserName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bbiUpdate = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
             this.gridProduct = new DevExpress.XtraGrid.GridControl();
             this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,6 +51,15 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pageNavigator1 = new CRM.UserControls.PageNavigator();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.bbiUpdate = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teIDCard.Properties)).BeginInit();
@@ -67,10 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -86,19 +86,19 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(950, 117);
+            this.panelControl1.Size = new System.Drawing.Size(950, 76);
             this.panelControl1.TabIndex = 5;
             // 
             // teIDCard
             // 
-            this.teIDCard.Location = new System.Drawing.Point(574, 37);
+            this.teIDCard.Location = new System.Drawing.Point(574, 11);
             this.teIDCard.Name = "teIDCard";
             this.teIDCard.Size = new System.Drawing.Size(173, 20);
             this.teIDCard.TabIndex = 11;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(511, 41);
+            this.labelControl3.Location = new System.Drawing.Point(505, 14);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(48, 14);
             this.labelControl3.TabIndex = 10;
@@ -106,14 +106,14 @@
             // 
             // tePhoneNumber
             // 
-            this.tePhoneNumber.Location = new System.Drawing.Point(321, 37);
+            this.tePhoneNumber.Location = new System.Drawing.Point(314, 11);
             this.tePhoneNumber.Name = "tePhoneNumber";
             this.tePhoneNumber.Size = new System.Drawing.Size(173, 20);
             this.tePhoneNumber.TabIndex = 9;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(272, 41);
+            this.labelControl2.Location = new System.Drawing.Point(272, 14);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(36, 14);
             this.labelControl2.TabIndex = 8;
@@ -122,7 +122,7 @@
             // sbtAdd
             // 
             this.sbtAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbtAdd.Location = new System.Drawing.Point(856, 83);
+            this.sbtAdd.Location = new System.Drawing.Point(856, 41);
             this.sbtAdd.Name = "sbtAdd";
             this.sbtAdd.Size = new System.Drawing.Size(87, 27);
             this.sbtAdd.TabIndex = 7;
@@ -132,7 +132,7 @@
             // sbtnQuery
             // 
             this.sbtnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbtnQuery.Location = new System.Drawing.Point(856, 36);
+            this.sbtnQuery.Location = new System.Drawing.Point(856, 8);
             this.sbtnQuery.Name = "sbtnQuery";
             this.sbtnQuery.Size = new System.Drawing.Size(87, 27);
             this.sbtnQuery.TabIndex = 4;
@@ -141,14 +141,14 @@
             // 
             // teUserName
             // 
-            this.teUserName.Location = new System.Drawing.Point(73, 37);
+            this.teUserName.Location = new System.Drawing.Point(79, 11);
             this.teUserName.Name = "teUserName";
             this.teUserName.Size = new System.Drawing.Size(173, 20);
             this.teUserName.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(35, 41);
+            this.labelControl1.Location = new System.Drawing.Point(37, 14);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 0;
@@ -159,88 +159,10 @@
             this.panelControl2.Controls.Add(this.gridProduct);
             this.panelControl2.Controls.Add(this.pageNavigator1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 117);
+            this.panelControl2.Location = new System.Drawing.Point(0, 76);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(950, 587);
+            this.panelControl2.Size = new System.Drawing.Size(950, 492);
             this.panelControl2.TabIndex = 6;
-            // 
-            // barManager1
-            // 
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiUpdate,
-            this.bbiDelete});
-            this.barManager1.MaxItemId = 3;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(950, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 704);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(950, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 704);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(950, 0);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 704);
-            // 
-            // bbiUpdate
-            // 
-            this.bbiUpdate.Caption = "修改";
-            this.bbiUpdate.Id = 1;
-            this.bbiUpdate.Name = "bbiUpdate";
-            this.bbiUpdate.Tag = "update";
-            this.bbiUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
-            // 
-            // bbiDelete
-            // 
-            this.bbiDelete.Caption = "删除";
-            this.bbiDelete.Id = 2;
-            this.bbiDelete.Name = "bbiDelete";
-            this.bbiDelete.Tag = "delete";
-            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiUpdate),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiDelete)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
-            // pageNavigator1
-            // 
-            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pageNavigator1.Location = new System.Drawing.Point(2, 555);
-            this.pageNavigator1.Name = "pageNavigator1";
-            this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
-            this.pageNavigator1.Skip = 0;
-            this.pageNavigator1.TabIndex = 5;
-            this.pageNavigator1.Total = 0;
             // 
             // gridProduct
             // 
@@ -264,7 +186,7 @@
             this.gridProduct.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.gridProduct.MainView = this.gridViewProduct;
             this.gridProduct.Name = "gridProduct";
-            this.gridProduct.Size = new System.Drawing.Size(946, 553);
+            this.gridProduct.Size = new System.Drawing.Size(946, 458);
             this.gridProduct.TabIndex = 6;
             this.gridProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProduct});
@@ -288,6 +210,10 @@
             this.gridViewProduct.Name = "gridViewProduct";
             this.gridViewProduct.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProduct.OptionsView.ShowGroupPanel = false;
+            this.gridViewProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridViewProduct_CustomDrawRowIndicator);
+            this.gridViewProduct.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.gridViewProduct_CustomDrawEmptyForeground);
+            this.gridViewProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProduct_MouseDown);
+            this.gridViewProduct.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridViewProduct_MouseUp);
             // 
             // gridColumn7
             // 
@@ -474,6 +400,84 @@
             this.gridColumn5.VisibleIndex = 8;
             this.gridColumn5.Width = 94;
             // 
+            // pageNavigator1
+            // 
+            this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pageNavigator1.Location = new System.Drawing.Point(2, 460);
+            this.pageNavigator1.Name = "pageNavigator1";
+            this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
+            this.pageNavigator1.Skip = 0;
+            this.pageNavigator1.TabIndex = 5;
+            this.pageNavigator1.Total = 0;
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.bbiUpdate,
+            this.bbiDelete});
+            this.barManager1.MaxItemId = 3;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(950, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(950, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 568);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(950, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 568);
+            // 
+            // bbiUpdate
+            // 
+            this.bbiUpdate.Caption = "修改";
+            this.bbiUpdate.Id = 1;
+            this.bbiUpdate.Name = "bbiUpdate";
+            this.bbiUpdate.Tag = "update";
+            this.bbiUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // bbiDelete
+            // 
+            this.bbiDelete.Caption = "删除";
+            this.bbiDelete.Id = 2;
+            this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.Tag = "delete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiUpdate),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiDelete)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
             // MmberManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -485,7 +489,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "MmberManager";
-            this.Size = new System.Drawing.Size(950, 704);
+            this.Size = new System.Drawing.Size(950, 568);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -494,10 +498,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

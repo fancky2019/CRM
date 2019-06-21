@@ -65,19 +65,19 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(950, 81);
+            this.panelControl1.Size = new System.Drawing.Size(950, 52);
             this.panelControl1.TabIndex = 5;
             // 
             // teUserName
             // 
-            this.teUserName.Location = new System.Drawing.Point(369, 36);
+            this.teUserName.Location = new System.Drawing.Point(373, 15);
             this.teUserName.Name = "teUserName";
             this.teUserName.Size = new System.Drawing.Size(173, 20);
             this.teUserName.TabIndex = 6;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(303, 39);
+            this.labelControl2.Location = new System.Drawing.Point(298, 18);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 14);
             this.labelControl2.TabIndex = 5;
@@ -86,7 +86,7 @@
             // sbtnQuery
             // 
             this.sbtnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbtnQuery.Location = new System.Drawing.Point(856, 36);
+            this.sbtnQuery.Location = new System.Drawing.Point(858, 18);
             this.sbtnQuery.Name = "sbtnQuery";
             this.sbtnQuery.Size = new System.Drawing.Size(87, 27);
             this.sbtnQuery.TabIndex = 4;
@@ -95,14 +95,14 @@
             // 
             // tePhoneNumber
             // 
-            this.tePhoneNumber.Location = new System.Drawing.Point(101, 36);
+            this.tePhoneNumber.Location = new System.Drawing.Point(105, 15);
             this.tePhoneNumber.Name = "tePhoneNumber";
             this.tePhoneNumber.Size = new System.Drawing.Size(173, 20);
             this.tePhoneNumber.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(35, 39);
+            this.labelControl1.Location = new System.Drawing.Point(29, 18);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 14);
             this.labelControl1.TabIndex = 0;
@@ -113,9 +113,9 @@
             this.panelControl2.Controls.Add(this.gridProduct);
             this.panelControl2.Controls.Add(this.pageNavigator1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 81);
+            this.panelControl2.Location = new System.Drawing.Point(0, 52);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(950, 371);
+            this.panelControl2.Size = new System.Drawing.Size(950, 400);
             this.panelControl2.TabIndex = 6;
             // 
             // gridProduct
@@ -140,7 +140,7 @@
             this.gridProduct.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.gridProduct.MainView = this.gridViewProduct;
             this.gridProduct.Name = "gridProduct";
-            this.gridProduct.Size = new System.Drawing.Size(946, 337);
+            this.gridProduct.Size = new System.Drawing.Size(946, 366);
             this.gridProduct.TabIndex = 6;
             this.gridProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProduct});
@@ -161,6 +161,8 @@
             this.gridViewProduct.Name = "gridViewProduct";
             this.gridViewProduct.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProduct.OptionsView.ShowGroupPanel = false;
+            this.gridViewProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridViewProduct_CustomDrawRowIndicator);
+            this.gridViewProduct.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.gridViewProduct_CustomDrawEmptyForeground);
             // 
             // gridColumn3
             // 
@@ -216,6 +218,12 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn2.Caption = "充值金额";
             this.gridColumn2.FieldName = "DepositAmount";
             this.gridColumn2.MinWidth = 23;
@@ -296,7 +304,7 @@
             // pageNavigator1
             // 
             this.pageNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pageNavigator1.Location = new System.Drawing.Point(2, 339);
+            this.pageNavigator1.Location = new System.Drawing.Point(2, 368);
             this.pageNavigator1.Name = "pageNavigator1";
             this.pageNavigator1.Size = new System.Drawing.Size(946, 30);
             this.pageNavigator1.Skip = 0;
