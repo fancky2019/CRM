@@ -86,7 +86,7 @@
             // sbtnQuery
             // 
             this.sbtnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbtnQuery.Location = new System.Drawing.Point(858, 18);
+            this.sbtnQuery.Location = new System.Drawing.Point(858, 12);
             this.sbtnQuery.Name = "sbtnQuery";
             this.sbtnQuery.Size = new System.Drawing.Size(87, 27);
             this.sbtnQuery.TabIndex = 4;
