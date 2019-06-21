@@ -30,25 +30,25 @@ namespace WMS.UserControls.InOutStockManager
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pageNavigator = new CRM.UserControls.PageNavigator();
-            this.gridProductDetail = new DevExpress.XtraGrid.GridControl();
-            this.gridViewProductDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridCheckOutOrderDetail = new DevExpress.XtraGrid.GridControl();
+            this.gridViewCheckOutOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ribeDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridProductSource = new DevExpress.XtraGrid.GridControl();
-            this.gridViewProductSource = new DevExpress.XtraGrid.Views.Grid.GridView();
+
+        
+            this.gridCheckOutOrder = new DevExpress.XtraGrid.GridControl();
+            this.gridViewCheckOutOrder = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,12 +70,12 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridProductDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribeDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridProductSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrderDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrderDetail)).BeginInit();
+       
+      
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
@@ -94,8 +94,8 @@ namespace WMS.UserControls.InOutStockManager
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.pageNavigator);
-            this.layoutControl1.Controls.Add(this.gridProductDetail);
-            this.layoutControl1.Controls.Add(this.gridProductSource);
+            this.layoutControl1.Controls.Add(this.gridCheckOutOrderDetail);
+            this.layoutControl1.Controls.Add(this.gridCheckOutOrder);
             this.layoutControl1.Controls.Add(this.teUserName);
             this.layoutControl1.Controls.Add(this.sbtnQuery);
             this.layoutControl1.Controls.Add(this.tePhoneNumber);
@@ -120,37 +120,35 @@ namespace WMS.UserControls.InOutStockManager
             this.pageNavigator.Total = 0;
             this.pageNavigator.PageIndexChanged += new System.Action<int, int>(this.pageNavigator1_PageIndexChanged);
             // 
-            // gridProductDetail
+            // gridCheckOutOrderDetail
             // 
-            this.gridProductDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridProductDetail.Location = new System.Drawing.Point(33, 364);
-            this.gridProductDetail.MainView = this.gridViewProductDetail;
-            this.gridProductDetail.Margin = new System.Windows.Forms.Padding(4);
-            this.gridProductDetail.Name = "gridProductDetail";
-            this.gridProductDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemTextEdit1,
-            this.ribeDelete});
-            this.gridProductDetail.Size = new System.Drawing.Size(787, 312);
-            this.gridProductDetail.TabIndex = 7;
-            this.gridProductDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewProductDetail});
+            this.gridCheckOutOrderDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCheckOutOrderDetail.Location = new System.Drawing.Point(33, 364);
+            this.gridCheckOutOrderDetail.MainView = this.gridViewCheckOutOrderDetail;
+            this.gridCheckOutOrderDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCheckOutOrderDetail.Name = "gridCheckOutOrderDetail";
+            this.gridCheckOutOrderDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+          
+            });
+            this.gridCheckOutOrderDetail.Size = new System.Drawing.Size(787, 312);
+            this.gridCheckOutOrderDetail.TabIndex = 7;
+            this.gridCheckOutOrderDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewCheckOutOrderDetail});
             // 
-            // gridViewProductDetail
+            // gridViewCheckOutOrderDetail
             // 
-            this.gridViewProductDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewCheckOutOrderDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcProductName,
             this.gridColumn7,
             this.gridColumn6,
             this.gridColumn5,
             this.gcCount,
             this.gridColumn9});
-            this.gridViewProductDetail.DetailHeight = 327;
-            this.gridViewProductDetail.GridControl = this.gridProductDetail;
-            this.gridViewProductDetail.Name = "gridViewProductDetail";
-            this.gridViewProductDetail.OptionsMenu.EnableColumnMenu = false;
-            this.gridViewProductDetail.OptionsView.ShowGroupPanel = false;
-            this.gridViewProductDetail.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridViewProductDetail_InvalidRowException);
-            this.gridViewProductDetail.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewProductDetail_ValidateRow);
+            this.gridViewCheckOutOrderDetail.DetailHeight = 327;
+            this.gridViewCheckOutOrderDetail.GridControl = this.gridCheckOutOrderDetail;
+            this.gridViewCheckOutOrderDetail.Name = "gridViewCheckOutOrderDetail";
+            this.gridViewCheckOutOrderDetail.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewCheckOutOrderDetail.OptionsView.ShowGroupPanel = false;
             // 
             // gcProductName
             // 
@@ -231,13 +229,6 @@ namespace WMS.UserControls.InOutStockManager
             this.gcCount.VisibleIndex = 5;
             this.gcCount.Width = 70;
             // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            this.repositoryItemTextEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repositoryItemTextEdit1_KeyDown);
-            // 
             // gridColumn9
             // 
             this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
@@ -255,48 +246,40 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 4;
             this.gridColumn9.Width = 38;
+    
+
             // 
-            // ribeDelete
+            // gridCheckOutOrder
             // 
-            this.ribeDelete.AutoHeight = false;
-            this.ribeDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.ribeDelete.Name = "ribeDelete";
-            this.ribeDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.ribeDelete.Click += new System.EventHandler(this.ribeDelete_Click);
-            // 
-            // gridProductSource
-            // 
-            this.gridProductSource.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridProductSource.Location = new System.Drawing.Point(33, 67);
-            this.gridProductSource.MainView = this.gridViewProductSource;
-            this.gridProductSource.Margin = new System.Windows.Forms.Padding(4);
-            this.gridProductSource.Name = "gridProductSource";
-            this.gridProductSource.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridCheckOutOrder.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCheckOutOrder.Location = new System.Drawing.Point(33, 67);
+            this.gridCheckOutOrder.MainView = this.gridViewCheckOutOrder;
+            this.gridCheckOutOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCheckOutOrder.Name = "gridCheckOutOrder";
+            this.gridCheckOutOrder.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridProductSource.Size = new System.Drawing.Size(787, 215);
-            this.gridProductSource.TabIndex = 4;
-            this.gridProductSource.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewProductSource});
+            this.gridCheckOutOrder.Size = new System.Drawing.Size(787, 215);
+            this.gridCheckOutOrder.TabIndex = 4;
+            this.gridCheckOutOrder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewCheckOutOrder});
             // 
-            // gridViewProductSource
+            // gridViewCheckOutOrder
             // 
-            this.gridViewProductSource.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewCheckOutOrder.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn10});
-            this.gridViewProductSource.DetailHeight = 327;
-            this.gridViewProductSource.GridControl = this.gridProductSource;
-            this.gridViewProductSource.Name = "gridViewProductSource";
-            this.gridViewProductSource.OptionsMenu.EnableColumnMenu = false;
-            this.gridViewProductSource.OptionsSelection.CheckBoxSelectorColumnWidth = 22;
-            this.gridViewProductSource.OptionsSelection.MultiSelect = true;
-            this.gridViewProductSource.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridViewProductSource.OptionsView.ShowGroupPanel = false;
-            this.gridViewProductSource.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridViewProductSource_SelectionChanged);
-            this.gridViewProductSource.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProductSource_MouseDown);
+            this.gridViewCheckOutOrder.DetailHeight = 327;
+            this.gridViewCheckOutOrder.GridControl = this.gridCheckOutOrder;
+            this.gridViewCheckOutOrder.Name = "gridViewCheckOutOrder";
+            this.gridViewCheckOutOrder.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewCheckOutOrder.OptionsSelection.CheckBoxSelectorColumnWidth = 22;
+            this.gridViewCheckOutOrder.OptionsSelection.MultiSelect = true;
+            this.gridViewCheckOutOrder.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridViewCheckOutOrder.OptionsView.ShowGroupPanel = false;
+            this.gridViewCheckOutOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProductSource_MouseDown);
             // 
             // gridColumn1
             // 
@@ -468,7 +451,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gridProductSource;
+            this.layoutControlItem1.Control = this.gridCheckOutOrder;
             this.layoutControlItem1.FillControlToClientArea = false;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(186, 22);
@@ -544,7 +527,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.gridProductDetail;
+            this.layoutControlItem4.Control = this.gridCheckOutOrderDetail;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(800, 316);
@@ -564,12 +547,12 @@ namespace WMS.UserControls.InOutStockManager
             this.Load += new System.EventHandler(this.CheckOutManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridProductDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribeDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridProductSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProductSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrderDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrderDetail)).EndInit();
+   
+     
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
@@ -590,10 +573,10 @@ namespace WMS.UserControls.InOutStockManager
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridProductDetail;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewProductDetail;
-        private DevExpress.XtraGrid.GridControl gridProductSource;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewProductSource;
+        private DevExpress.XtraGrid.GridControl gridCheckOutOrderDetail;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCheckOutOrderDetail;
+        private DevExpress.XtraGrid.GridControl gridCheckOutOrder;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCheckOutOrder;
         private DevExpress.XtraEditors.TextEdit teUserName;
         private DevExpress.XtraEditors.SimpleButton sbtnQuery;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
@@ -610,11 +593,11 @@ namespace WMS.UserControls.InOutStockManager
         private DevExpress.XtraGrid.Columns.GridColumn gcProductName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gcCount;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ribeDelete;
+  
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private PageNavigator pageNavigator;
