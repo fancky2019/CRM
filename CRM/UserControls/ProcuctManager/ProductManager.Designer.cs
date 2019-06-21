@@ -168,6 +168,10 @@
             this.gridViewProduct.Name = "gridViewProduct";
             this.gridViewProduct.OptionsMenu.EnableColumnMenu = false;
             this.gridViewProduct.OptionsView.ShowGroupPanel = false;
+            this.gridViewProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridViewProduct_CustomDrawRowIndicator);
+            this.gridViewProduct.CustomDrawEmptyForeground += new DevExpress.XtraGrid.Views.Base.CustomDrawEventHandler(this.gridViewProduct_CustomDrawEmptyForeground);
+            this.gridViewProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProduct_MouseDown);
+            this.gridViewProduct.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridViewProduct_MouseUp);
             // 
             // gridColumn7
             // 

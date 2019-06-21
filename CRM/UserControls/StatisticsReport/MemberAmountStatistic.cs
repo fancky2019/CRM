@@ -64,8 +64,8 @@ namespace CRM.UserControls.ProcuctManager
 
             var result = _bll.MemberAmountStatistic(qm);
             this.gridProduct.DataSource = null;
-            this.pageNavigator1.Total = result.Item1;
-            this.gridProduct.DataSource = result.Item2;
+            this.pageNavigator1.Total = result.Count;
+            this.gridProduct.DataSource = result.ListMemberAmountVM;
         }
 
         //没有查询到数据时候，显示提示

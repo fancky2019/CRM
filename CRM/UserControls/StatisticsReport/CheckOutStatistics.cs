@@ -101,5 +101,41 @@ namespace WMS.UserControls.InOutStockManager
         }
 
         #endregion
+
+        private void GvCheckOutOrder_CustomDrawEmptyForeground(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
+        {
+            if (this.gvCheckOutOrder.RowCount == 0)
+            {
+                Font f = new Font("宋体", 12, FontStyle.Bold);
+                Rectangle r = new Rectangle(gvCheckOutOrder.GridControl.Width / 2 - 100, e.Bounds.Top + 5, e.Bounds.Right - 5, e.Bounds.Height - 5);
+                e.Graphics.DrawString("没有查询到数据!", f, Brushes.Red, r);
+            }
+        }
+
+        private void GvCheckOutOrder_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle > -1)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
+
+        private void GvCheckOutOrderDetail_CustomDrawEmptyForeground(object sender, DevExpress.XtraGrid.Views.Base.CustomDrawEventArgs e)
+        {
+            if (this.gvCheckOutOrderDetail.RowCount == 0)
+            {
+                Font f = new Font("宋体", 12, FontStyle.Bold);
+                Rectangle r = new Rectangle(gvCheckOutOrderDetail.GridControl.Width / 2 - 100, e.Bounds.Top + 5, e.Bounds.Right - 5, e.Bounds.Height - 5);
+                e.Graphics.DrawString("没有查询到数据!", f, Brushes.Red, r);
+            }
+        }
+
+        private void GvCheckOutOrderDetail_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle > -1)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
     }
 }
