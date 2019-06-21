@@ -16,5 +16,10 @@ namespace CRM.UserControls
         {
             InitializeComponent();
         }
+
+        private void SimpleButton1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory);
+        }
     }
 }
