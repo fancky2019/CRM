@@ -164,7 +164,7 @@
     <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.Designer.cs">
+    <Compile Include="UserControls\StatisticsReport\CheckOutStatistics.designer.cs">
       <DependentUpon>CheckOutStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StatisticsReport\MemberAmountStatistic.cs">
