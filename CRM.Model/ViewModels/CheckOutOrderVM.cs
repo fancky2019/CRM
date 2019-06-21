@@ -17,6 +17,11 @@ namespace CRM.Model.ViewModels
         /// 
         /// </summary>
         public int MemberID { get; set; }
+        public string UserName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PhoneNumber { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -25,6 +30,8 @@ namespace CRM.Model.ViewModels
         /// 付款方式：0：现金，1：积分
         /// </summary>
         public int Type { get; set; }
+
+        public string TypeString { get; set; }
         /// <summary>
         /// 
         /// </summary>

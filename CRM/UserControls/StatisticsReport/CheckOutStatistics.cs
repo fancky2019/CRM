@@ -1,17 +1,13 @@
 ﻿using CRM.BLL.CheckOutManager;
 using CRM.BLL.ProductManager;
+using CRM.BLL.StatisticsReport;
 using CRM.BLL.SystemManager;
-using CRM.Common;
-using CRM.Model.EntityModels;
 using CRM.Model.EntityModels.CRM;
 using CRM.Model.QueryModels;
 using CRM.Model.ViewModels;
-using CRM.UserControls;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -20,162 +16,90 @@ namespace WMS.UserControls.InOutStockManager
 {
     public partial class CheckOutStatistics : XtraUserControl
     {
-        ProductManagerBll _productManagerBll = null;
-        //   InOutStockManagerBll _inOutStockManagerBll = null;
-        List<ProductVM> _selectedProduct = null;
+        StatisticsReportBll _statisticsReportBll = null;
 
-        SystemCodeBll _systemCodeBll = null;
-        MemberManagerBll _memberManagerBll = null;
-        CheckOutManagerBll _checkOutManagerBll = null;
-
-        MemberAmountVM _memberAmountVM = null;
-
-        List<SystemCode> _checkOutTypeSystemCodeList = null;
         public CheckOutStatistics()
         {
             InitializeComponent();
-            _systemCodeBll = new SystemCodeBll();
-            _productManagerBll = new ProductManagerBll();
-
-            // _inOutStockManagerBll = new InOutStockManagerBll();
-            _selectedProduct = new List<ProductVM>();
-
-
-            _checkOutManagerBll = new CheckOutManagerBll();
-            _memberManagerBll = new MemberManagerBll();
-
+            _statisticsReportBll = new StatisticsReportBll();
         }
         private void CheckOutManager_Load(object sender, EventArgs e)
         {
-            LoadData();
+            QueryData();
         }
-        private void LoadData()
-        {
-            _checkOutTypeSystemCodeList = _systemCodeBll.GetSystemCode("CheckOutType");
-        
-            //  lueCheckOutType.Properties.PopulateColumns();
-            //InOutStockVM inOutStockVM = this.Tag as InOutStockVM;
-            //if (inOutStockVM != null)
-            //{
-            //    this.cmeInOut.SelectedIndex = inOutStockVM.Type - 1;
-            //    _selectedProduct = _inOutStockManagerBll.GetInOutStockDetail(inOutStockVM.ID);
-            //    this.gridProductDetail.DataSource = _selectedProduct;
-            //}
-        }
-
 
         private void sbtnQuery_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(this.tePhoneNumber.Text.Trim()))
-            {
-                XtraMessageBox.Show($"请先填写会员手机号！", "提示", MessageBoxButtons.OK);
-                return;
-            }
-            else
-            {
-                Member member = _memberManagerBll.GetMemberByPhoneNumber(this.tePhoneNumber.Text.Trim());
-                if (member == null)
-                {
-                    XtraMessageBox.Show($"不存在手机号为{this.tePhoneNumber.Text.Trim()}的会员！", "提示", MessageBoxButtons.OK);
-                    return;
-                }
-            }
-
-            if (_memberAmountVM == null)
-            {
-                _memberAmountVM = _checkOutManagerBll.GetMemberAmountByPhoneNumber(this.tePhoneNumber.Text.Trim());
-                if (_memberAmountVM == null)
-                {
-                    XtraMessageBox.Show($"您的余额为零请充值！", "提示", MessageBoxButtons.OK);
-                    return;
-                }
-            }
-       
             this.pageNavigator.Skip = 0;
-            InitData();
+            QueryData();
         }
         private void pageNavigator1_PageIndexChanged(int take, int skip)
         {
-            InitData();
+            QueryData();
         }
-        bool initDadaComplete = false;
-        private void InitData()
+
+        private void QueryData()
         {
-            initDadaComplete = false;
-            ProductQM qm = new ProductQM()
+            CheckOutOrderQM qm = new CheckOutOrderQM()
             {
-                ProductName = this.teUserName.Text.Trim(),
+                UserName = this.teUserName.Text.Trim(),
+                PhoneNumber = this.tePhoneNumber.Text.Trim(),
                 Skip = this.pageNavigator.Skip,
                 Take = this.pageNavigator.Take
             };
-            var result = _productManagerBll.LoadData(qm);
+            var result = _statisticsReportBll.CheckOutOrderStatistic(qm);
             this.pageNavigator.Total = result.Count;
-            this.gridCheckOutOrder.DataSource = result.ListProductVM;
-            for (int j = 0; j < _selectedProduct.Count; j++)
-            {
-                for (int i = 0; i < gridViewCheckOutOrder.DataRowCount; i++)
-                {
-                    ProductVM product = this.gridViewCheckOutOrder.GetRow(i) as ProductVM;//获取选中行的实体
-                    if (product.ID == _selectedProduct[j].ID)
-                    {
-                        this.gridViewCheckOutOrder.SelectRow(i);
-                    }
-                }
-            }
-            initDadaComplete = true;
-            //this.gridViewProductSource.ClearSelection();//清除选中
-
+            this.gcCheckOutOrder.DataSource = result.ListCheckOutOrderVM;
         }
 
 
+        #region  单选 主从
 
-        private void gridViewProductSource_MouseDown(object sender, MouseEventArgs e)
+        //控制单选
+        private void gvCheckOutOrder_MouseDown(object sender, MouseEventArgs e)
         {
-            //DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hInfo = gridViewCheckOutOrder.CalcHitInfo(new Point(e.X, e.Y));
-            //if (e.Button == MouseButtons.Left && e.Clicks == 2)
-            //{
-            //    //判断光标是否在行范围内  
-            //    if (hInfo.InRow)
-            //    {
-            //        this.gridViewCheckOutOrder.SelectRow(hInfo.RowHandle);
-
-            //        ////取得选定行信息  
-            //        //ProductVM product = this.gridViewProductSource.GetRow(hInfo.RowHandle) as ProductVM;//获取选中行的实体
-            //        //if (_selectedProduct.Any(p => p.ProductName == product.ProductName && p.ProductStyle == product.ProductStyle))
-            //        //{
-            //        //    return;
-            //        //}
-            //        //ProductVM vm = product.CloneModel<ProductVM>();
-            //        //_selectedProduct.Add(vm);
-            //        //this.gridProductDetail.DataSource = null;
-            //        //this.gridProductDetail.DataSource = _selectedProduct;
-            //    }
-            //}
-
-            DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hInfo = this.gridViewCheckOutOrder.CalcHitInfo(new Point(e.X, e.Y));
-            if (e.Button == MouseButtons.Left && e.Clicks == 2)
+            DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hInfo = this.gvCheckOutOrder.CalcHitInfo(new Point(e.X, e.Y));
+            if (e.Button == MouseButtons.Left)
             {
                 //判断光标是否在行范围内  
                 if (hInfo.InRow)
                 {
-                    int[] selectedRowHandles = this.gridViewCheckOutOrder.GetSelectedRows();
+                    //上次选择的行，此次选择的事件还没结束
+                    var selectedRowHandles = this.gvCheckOutOrder.GetSelectedRows().ToList();
+
                     foreach (var i in selectedRowHandles)
                     {
-                        this.gridViewCheckOutOrder.UnselectRow(i);
+                        //  清空之前选择的
+                        if (i != hInfo.RowHandle)
+                        {
+                            this.gvCheckOutOrder.UnselectRow(i);
+                            //     this.gvCheckOutOrder.SelectRow(hInfo.RowHandle);
+                        }
                     }
-                    this.gridViewCheckOutOrder.SelectRow(hInfo.RowHandle);
-                    List<CheckOutOrderVM> list = this.gridViewCheckOutOrder.DataSource as List<CheckOutOrderVM>;
-
-                    ////取得选定行信息  
-                    CheckOutOrderVM order = this.gridViewCheckOutOrder.GetRow(hInfo.RowHandle) as CheckOutOrderVM;//获取实体
-                  //  this.gridCheckOutOrderDetail.DataSource = _bll.GetInOutStockDetail(order.ID);
                 }
             }
 
         }
 
 
+        //控制从表数据
+        private void GvCheckOutOrder_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            var selectedRowHandles = this.gvCheckOutOrder.GetSelectedRows().ToList();
+            if (selectedRowHandles.Count == 0)
+            {
+                this.gcCheckOutOrderDetail.DataSource = null;
+            }
+            else
+            {
+                //取得焦点行信息  
+                CheckOutOrderVM checkOutOrderVM = this.gvCheckOutOrder.GetRow(this.gvCheckOutOrder.FocusedRowHandle) as CheckOutOrderVM;//获取实体
+                this.gcCheckOutOrderDetail.DataSource = _statisticsReportBll.GetCheckOutOrderDetail(new CheckOutOrderDetailQM { CheckOutOrderID = checkOutOrderVM.ID });
+            }
 
 
+        }
+
+        #endregion
     }
 }

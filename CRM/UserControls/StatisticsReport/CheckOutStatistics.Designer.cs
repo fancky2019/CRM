@@ -32,16 +32,17 @@ namespace WMS.UserControls.InOutStockManager
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pageNavigator = new CRM.UserControls.PageNavigator();
-            this.gridCheckOutOrderDetail = new DevExpress.XtraGrid.GridControl();
-            this.gridViewCheckOutOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcCheckOutOrderDetail = new DevExpress.XtraGrid.GridControl();
+            this.gvCheckOutOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridCheckOutOrder = new DevExpress.XtraGrid.GridControl();
-            this.gridViewCheckOutOrder = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCheckOutOrder = new DevExpress.XtraGrid.GridControl();
+            this.gvCheckOutOrder = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,13 +62,12 @@ namespace WMS.UserControls.InOutStockManager
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrderDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrderDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCheckOutOrderDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheckOutOrderDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCheckOutOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheckOutOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).BeginInit();
@@ -86,8 +86,8 @@ namespace WMS.UserControls.InOutStockManager
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.pageNavigator);
-            this.layoutControl1.Controls.Add(this.gridCheckOutOrderDetail);
-            this.layoutControl1.Controls.Add(this.gridCheckOutOrder);
+            this.layoutControl1.Controls.Add(this.gcCheckOutOrderDetail);
+            this.layoutControl1.Controls.Add(this.gcCheckOutOrder);
             this.layoutControl1.Controls.Add(this.teUserName);
             this.layoutControl1.Controls.Add(this.sbtnQuery);
             this.layoutControl1.Controls.Add(this.tePhoneNumber);
@@ -112,36 +112,39 @@ namespace WMS.UserControls.InOutStockManager
             this.pageNavigator.Total = 0;
             this.pageNavigator.PageIndexChanged += new System.Action<int, int>(this.pageNavigator1_PageIndexChanged);
             // 
-            // gridCheckOutOrderDetail
+            // gcCheckOutOrderDetail
             // 
-            this.gridCheckOutOrderDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridCheckOutOrderDetail.Location = new System.Drawing.Point(33, 364);
-            this.gridCheckOutOrderDetail.MainView = this.gridViewCheckOutOrderDetail;
-            this.gridCheckOutOrderDetail.Margin = new System.Windows.Forms.Padding(4);
-            this.gridCheckOutOrderDetail.Name = "gridCheckOutOrderDetail";
-            this.gridCheckOutOrderDetail.Size = new System.Drawing.Size(787, 312);
-            this.gridCheckOutOrderDetail.TabIndex = 7;
-            this.gridCheckOutOrderDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewCheckOutOrderDetail});
+            this.gcCheckOutOrderDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcCheckOutOrderDetail.Location = new System.Drawing.Point(33, 364);
+            this.gcCheckOutOrderDetail.MainView = this.gvCheckOutOrderDetail;
+            this.gcCheckOutOrderDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.gcCheckOutOrderDetail.Name = "gcCheckOutOrderDetail";
+            this.gcCheckOutOrderDetail.Size = new System.Drawing.Size(787, 312);
+            this.gcCheckOutOrderDetail.TabIndex = 7;
+            this.gcCheckOutOrderDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCheckOutOrderDetail});
             // 
-            // gridViewCheckOutOrderDetail
+            // gvCheckOutOrderDetail
             // 
-            this.gridViewCheckOutOrderDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvCheckOutOrderDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcProductName,
             this.gridColumn7,
             this.gridColumn6,
             this.gridColumn5,
-            this.gcCount,
+            this.gridColumn11,
             this.gridColumn9,
             this.gridColumn8});
-            this.gridViewCheckOutOrderDetail.DetailHeight = 327;
-            this.gridViewCheckOutOrderDetail.GridControl = this.gridCheckOutOrderDetail;
-            this.gridViewCheckOutOrderDetail.Name = "gridViewCheckOutOrderDetail";
-            this.gridViewCheckOutOrderDetail.OptionsMenu.EnableColumnMenu = false;
-            this.gridViewCheckOutOrderDetail.OptionsView.ShowGroupPanel = false;
+            this.gvCheckOutOrderDetail.DetailHeight = 327;
+            this.gvCheckOutOrderDetail.GridControl = this.gcCheckOutOrderDetail;
+            this.gvCheckOutOrderDetail.Name = "gvCheckOutOrderDetail";
+            this.gvCheckOutOrderDetail.OptionsMenu.EnableColumnMenu = false;
+            this.gvCheckOutOrderDetail.OptionsView.ShowGroupPanel = false;
             // 
             // gcProductName
             // 
+            this.gcProductName.AppearanceCell.Options.UseTextOptions = true;
+            this.gcProductName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gcProductName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gcProductName.AppearanceHeader.Options.UseTextOptions = true;
             this.gcProductName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gcProductName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -156,10 +159,13 @@ namespace WMS.UserControls.InOutStockManager
             this.gcProductName.OptionsFilter.AllowFilter = false;
             this.gcProductName.Visible = true;
             this.gcProductName.VisibleIndex = 0;
-            this.gcProductName.Width = 123;
+            this.gcProductName.Width = 167;
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -174,7 +180,7 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 1;
-            this.gridColumn7.Width = 123;
+            this.gridColumn7.Width = 100;
             // 
             // gridColumn6
             // 
@@ -194,7 +200,7 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 66;
+            this.gridColumn6.Width = 102;
             // 
             // gridColumn5
             // 
@@ -214,28 +220,33 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 66;
+            this.gridColumn5.Width = 102;
             // 
-            // gcCount
+            // gridColumn11
             // 
-            this.gcCount.AppearanceCell.Options.UseTextOptions = true;
-            this.gcCount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gcCount.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gcCount.AppearanceHeader.Options.UseTextOptions = true;
-            this.gcCount.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gcCount.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gcCount.Caption = "实付价";
-            this.gcCount.FieldName = "RealityPrice";
-            this.gcCount.MinWidth = 17;
-            this.gcCount.Name = "gcCount";
-            this.gcCount.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.gcCount.OptionsFilter.AllowFilter = false;
-            this.gcCount.Visible = true;
-            this.gcCount.VisibleIndex = 5;
-            this.gcCount.Width = 70;
+            this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn11.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn11.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn11.Caption = "实付价";
+            this.gridColumn11.FieldName = "RealityPrice";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
+            this.gridColumn11.OptionsColumn.AllowFocus = false;
+            this.gridColumn11.OptionsColumn.AllowMove = false;
+            this.gridColumn11.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn11.OptionsFilter.AllowFilter = false;
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 4;
+            this.gridColumn11.Width = 98;
             // 
             // gridColumn9
             // 
+            this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn9.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn9.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -249,40 +260,65 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn9.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn9.OptionsFilter.AllowFilter = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 4;
-            this.gridColumn9.Width = 38;
+            this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.Width = 63;
             // 
-            // gridCheckOutOrder
+            // gridColumn8
             // 
-            this.gridCheckOutOrder.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridCheckOutOrder.Location = new System.Drawing.Point(33, 67);
-            this.gridCheckOutOrder.MainView = this.gridViewCheckOutOrder;
-            this.gridCheckOutOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.gridCheckOutOrder.Name = "gridCheckOutOrder";
-            this.gridCheckOutOrder.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn8.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn8.Caption = "创建时间";
+            this.gridColumn8.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn8.FieldName = "CreateTime";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.AllowFocus = false;
+            this.gridColumn8.OptionsColumn.AllowMove = false;
+            this.gridColumn8.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn8.OptionsFilter.AllowFilter = false;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.Width = 137;
+            // 
+            // gcCheckOutOrder
+            // 
+            this.gcCheckOutOrder.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcCheckOutOrder.Location = new System.Drawing.Point(33, 67);
+            this.gcCheckOutOrder.MainView = this.gvCheckOutOrder;
+            this.gcCheckOutOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.gcCheckOutOrder.Name = "gcCheckOutOrder";
+            this.gcCheckOutOrder.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridCheckOutOrder.Size = new System.Drawing.Size(787, 215);
-            this.gridCheckOutOrder.TabIndex = 4;
-            this.gridCheckOutOrder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewCheckOutOrder});
+            this.gcCheckOutOrder.Size = new System.Drawing.Size(787, 215);
+            this.gcCheckOutOrder.TabIndex = 4;
+            this.gcCheckOutOrder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCheckOutOrder});
             // 
-            // gridViewCheckOutOrder
+            // gvCheckOutOrder
             // 
-            this.gridViewCheckOutOrder.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvCheckOutOrder.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn10});
-            this.gridViewCheckOutOrder.DetailHeight = 327;
-            this.gridViewCheckOutOrder.GridControl = this.gridCheckOutOrder;
-            this.gridViewCheckOutOrder.Name = "gridViewCheckOutOrder";
-            this.gridViewCheckOutOrder.OptionsMenu.EnableColumnMenu = false;
-            this.gridViewCheckOutOrder.OptionsSelection.CheckBoxSelectorColumnWidth = 22;
-            this.gridViewCheckOutOrder.OptionsSelection.MultiSelect = true;
-            this.gridViewCheckOutOrder.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridViewCheckOutOrder.OptionsView.ShowGroupPanel = false;
-            this.gridViewCheckOutOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridViewProductSource_MouseDown);
+            this.gvCheckOutOrder.DetailHeight = 327;
+            this.gvCheckOutOrder.GridControl = this.gcCheckOutOrder;
+            this.gvCheckOutOrder.Name = "gvCheckOutOrder";
+            this.gvCheckOutOrder.OptionsDetail.EnableMasterViewMode = false;
+            this.gvCheckOutOrder.OptionsMenu.EnableColumnMenu = false;
+            this.gvCheckOutOrder.OptionsSelection.CheckBoxSelectorColumnWidth = 35;
+            this.gvCheckOutOrder.OptionsSelection.MultiSelect = true;
+            this.gvCheckOutOrder.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gvCheckOutOrder.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
+            this.gvCheckOutOrder.OptionsView.ShowGroupPanel = false;
+            this.gvCheckOutOrder.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.GvCheckOutOrder_SelectionChanged);
+            this.gvCheckOutOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvCheckOutOrder_MouseDown);
             // 
             // gridColumn1
             // 
@@ -343,7 +379,7 @@ namespace WMS.UserControls.InOutStockManager
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn4.Caption = "付款方式";
-            this.gridColumn4.FieldName = "Type";
+            this.gridColumn4.FieldName = "TypeString";
             this.gridColumn4.MaxWidth = 75;
             this.gridColumn4.MinWidth = 17;
             this.gridColumn4.Name = "gridColumn4";
@@ -359,8 +395,8 @@ namespace WMS.UserControls.InOutStockManager
             // gridColumn10
             // 
             this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -456,7 +492,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gridCheckOutOrder;
+            this.layoutControlItem1.Control = this.gcCheckOutOrder;
             this.layoutControlItem1.FillControlToClientArea = false;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(186, 22);
@@ -532,7 +568,7 @@ namespace WMS.UserControls.InOutStockManager
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.gridCheckOutOrderDetail;
+            this.layoutControlItem4.Control = this.gcCheckOutOrderDetail;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(800, 316);
@@ -540,20 +576,6 @@ namespace WMS.UserControls.InOutStockManager
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(4, 14);
             this.layoutControlItem4.TextToControlDistance = 5;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn8.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn8.Caption = "创建时间";
-            this.gridColumn8.FieldName = "CreateTime";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
             // 
             // CheckOutStatistics
             // 
@@ -566,10 +588,10 @@ namespace WMS.UserControls.InOutStockManager
             this.Load += new System.EventHandler(this.CheckOutManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrderDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrderDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCheckOutOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCheckOutOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCheckOutOrderDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheckOutOrderDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCheckOutOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheckOutOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhoneNumber.Properties)).EndInit();
@@ -590,10 +612,10 @@ namespace WMS.UserControls.InOutStockManager
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridCheckOutOrderDetail;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCheckOutOrderDetail;
-        private DevExpress.XtraGrid.GridControl gridCheckOutOrder;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCheckOutOrder;
+        private DevExpress.XtraGrid.GridControl gcCheckOutOrderDetail;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCheckOutOrderDetail;
+        private DevExpress.XtraGrid.GridControl gcCheckOutOrder;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCheckOutOrder;
         private DevExpress.XtraEditors.TextEdit teUserName;
         private DevExpress.XtraEditors.SimpleButton sbtnQuery;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
@@ -609,7 +631,6 @@ namespace WMS.UserControls.InOutStockManager
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gcProductName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gcCount;
 
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
@@ -623,5 +644,6 @@ namespace WMS.UserControls.InOutStockManager
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
     }
 }

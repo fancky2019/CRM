@@ -61,11 +61,14 @@
     <Compile Include="EntityModels\WMS\Sku.cs" />
     <Compile Include="EntityModels\WMS\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryModels\CheckOutOrderDetailQM.cs" />
+    <Compile Include="QueryModels\CheckOutOrderQM.cs" />
     <Compile Include="QueryModels\DepositQM.cs" />
     <Compile Include="QueryModels\MemberAmountQM.cs" />
     <Compile Include="QueryModels\MemberQM.cs" />
     <Compile Include="QueryModels\PageInfo.cs" />
     <Compile Include="QueryModels\ProductQM.cs" />
+    <Compile Include="ViewModels\CheckOutOrderDetailVM.cs" />
     <Compile Include="ViewModels\CheckOutOrderVM.cs" />
     <Compile Include="ViewModels\DepositVM.cs" />
     <Compile Include="ViewModels\MemberAmountVM.cs" />
