@@ -16,6 +16,7 @@ namespace CRM.Model.ViewModels
         /// 
         /// </summary>
         public int MemberID { get; set; }
+        public string UserName { get; set; }
         /// <summary>
         /// 
         /// </summary>

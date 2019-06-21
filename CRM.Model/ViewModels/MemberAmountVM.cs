@@ -20,6 +20,7 @@ namespace CRM.Model.ViewModels
         /// 
         /// </summary>
         public string PhoneNumber { get; set; }
+        public string UserName { get; set; }
         /// <summary>
         /// 账号总金额
         /// </summary>
