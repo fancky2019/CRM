@@ -243,14 +243,9 @@ D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.FrmPop.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.Properties.Resources.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.EditUserControl.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.GridControlUserControl.resources
-D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.InOutStockManager.InOutStockEdit.resources
-D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.InOutStockManager.InOutStockManager.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.PageNavigator.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductEdit.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.ProductManager.resources
-D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.SkuQuery.resources
-D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.StockManager.StockManager.resources
-D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.SystemManager.SkuManager.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.WaitForm1.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.cache
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.exe.licenses
@@ -392,3 +387,12 @@ D:\fancky\C#\CRM\CRM\obj\Debug\CRM.exe
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.pdb
 D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.MemberAmountStatistic.resources
 D:\fancky\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutStatistics.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutManager.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.Developing.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.MemberDeposit.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.MemberEdit.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.MmberManager.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.BonusPointsExchange.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutStatistics.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.MemberAmountStatistic.resources
+D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.DepositStatistics.resources
