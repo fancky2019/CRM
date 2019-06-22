@@ -179,6 +179,12 @@
     <Compile Include="UserControls\StatisticsReport\DepositStatistics.Designer.cs">
       <DependentUpon>DepositStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SystemManager\SystemTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SystemManager\SystemTool.Designer.cs">
+      <DependentUpon>SystemTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SystemManager\SystemUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,6 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StatisticsReport\DepositStatistics.resx">
       <DependentUpon>DepositStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SystemManager\SystemTool.resx">
+      <DependentUpon>SystemTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SystemManager\SystemUser.resx">
+      <DependentUpon>SystemUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
