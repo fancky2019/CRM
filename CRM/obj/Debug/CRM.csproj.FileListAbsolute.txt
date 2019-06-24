@@ -396,3 +396,5 @@ D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.MemberManager.BonusPoi
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\WMS.UserControls.InOutStockManager.CheckOutStatistics.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.MemberAmountStatistic.resources
 D:\Work\Project\Git\C#\CRM\CRM\obj\Debug\CRM.UserControls.ProcuctManager.DepositStatistics.resources
+D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.SystemManager.SystemTool.resources
+D:\fancky\C#\CRM\CRM\obj\Debug\CRM.UserControls.SystemManager.SystemUser.resources
