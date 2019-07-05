@@ -81,6 +81,12 @@
     <Compile Include="FrmLgoin.Designer.cs">
       <DependentUpon>FrmLgoin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLog4NetTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLog4NetTest.Designer.cs">
+      <DependentUpon>FrmLog4NetTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="FrmLgoin.resx">
       <DependentUpon>FrmLgoin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLog4NetTest.resx">
+      <DependentUpon>FrmLog4NetTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +278,14 @@
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="log4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="log4net_ErrorInfo.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="log4net_basic.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
