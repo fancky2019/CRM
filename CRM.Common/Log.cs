@@ -11,6 +11,7 @@ using System.Windows;
 namespace CRM.Common
 {
     /// <summary>
+    /// NuGet安装log4net
     ///  <!--(高) OFF > FATAL > ERROR > WARN > INFO > DEBUG > ALL (低) -->
     /// </summary>
     public class Log
