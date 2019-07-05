@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CRM.Common
 {
+    /// <summary>
+    /// 安装压缩程序包 SharpZipLib 程序包
+    /// </summary>
     public class Zip
     {
         public static void ZipLog()
