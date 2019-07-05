@@ -54,8 +54,10 @@ namespace CRM
             //}
 
 
-            Application.Run(new FrmLgoin());
+            // Application.Run(new FrmLgoin());
             //Application.Run(new FrmMain());
+
+            Application.Run(new FrmLog4NetTest());
 
         }
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
