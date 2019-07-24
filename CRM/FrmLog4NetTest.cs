@@ -32,5 +32,21 @@ namespace CRM
             Log.Error<FrmLog4NetTest>("error");
             Log.Fatal<FrmLog4NetTest>("Fatal");
         }
+
+        private void BtnFileSize_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 3000; i++)
+            {
+                Log.Info<FrmLog4NetTest>($"FileSize{i+1}");
+            }
+        }
+
+        private void BtnBufferCount_Click(object sender, EventArgs e)
+        {
+            for(int i =0;i<9;i++)
+            {
+                Log.Info<FrmLog4NetTest>($"BufferCount{i+1}");
+            }
+        }
     }
 }

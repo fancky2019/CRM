@@ -69,6 +69,10 @@
     <Compile Include="Zip.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="log4net_大小分割.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="log4net.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
