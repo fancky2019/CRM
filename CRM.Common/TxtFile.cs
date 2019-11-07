@@ -39,7 +39,7 @@ namespace CRM.Common
 
         public static void SaveTxtFile(string fllPath, List<string> content, FileMode fileMode = FileMode.Create)
         {
-            using (StreamWriter sw = new StreamWriter(File.Open(fllPath, fileMode, FileAccess.ReadWrite), System.Text.Encoding.UTF8))
+            using (StreamWriter sw = new StreamWriter(File.Open(fllPath, fileMode, FileAccess.Write), System.Text.Encoding.UTF8))
             {
                 foreach (string str in content)
                 {

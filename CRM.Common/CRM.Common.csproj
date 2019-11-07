@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="AutoMapperConfig.cs" />
     <Compile Include="AutoMapperExtention.cs" />
+    <Compile Include="BufferLog.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ExcelHelper.cs" />
+    <Compile Include="InterLockedExtention.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="ObjectReflectionClone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Zip.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="log4net - buffer.config" />
     <None Include="log4net_大小分割.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
