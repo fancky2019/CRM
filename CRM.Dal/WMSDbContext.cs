@@ -4,8 +4,11 @@ using CRM.Model.EntityModels.WMS;
 
 namespace WMS.Dal
 {
-    //在nuget 在线中安装EntityFramework
+    //在nuget 
+    //.NetFramework在线中安装EntityFramework
     //.net core 在nuget 在线中安装 EntityFrameworkCore
+
+    //.NetCore 下参见Demo下的NetCoreWebApi
     public class WMSDbContext : DbContext
     {
         static WMSDbContext()
